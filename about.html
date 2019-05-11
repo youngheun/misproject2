@@ -41,10 +41,14 @@
         margin: 10px;
         text-align: center;
     }
-    #history {padding-top:40px;padding-bottom: 10px;}
-    #structure {padding-top:40px;}
-    #partners {padding-top:40px;}
-    #contact {padding-top:40px;padding-bottom: 10px;}
+    .affix ~ .container-fluid {
+        position: relative;
+        top: 50px;
+    }
+    #history {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+    #structure {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+    #partners {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+    #contact {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
     </style>
 </head>
 
@@ -61,6 +65,14 @@
     <!-- 전체 메뉴 영역 -->
     <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100">
         <div class="container-fluid">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
@@ -73,12 +85,12 @@
             <li><a href="#">Notice</a></li>
             <li><a href="#">Question</a></li>
             <li class="dropdown active">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us</a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#history">History</a></li>
-                    <li><a href="#structure">Structure</a></li>
-                    <li><a href="#partners">Partners</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="about.html#history">History</a></li>
+                    <li><a href="about.html#structure">Structure</a></li>
+                    <li><a href="about.html#partners">Partners</a></li>
+                    <li><a href="about.html#contact">Contact Us</a></li>
                 </ul>
             </li>
         </ul>
