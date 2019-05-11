@@ -7,8 +7,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>MyRecipe</title>
     <style>
-    .content {
-        padding: 30px 50px;
+    body {
+        position: relative;
+    }
+    .affix {
+        top:0;
+        width: 100%;
+        z-index: 9999 !important;
     }
     .navbar {
         border: 0;
@@ -21,22 +26,36 @@
         color: #f9a602 !important;
         background-color: #fff !important;
     }
+    .navbar .navbar-nav > .open > a,
+    .navbar .navbar-nav > .open > a:hover,
+    .navbar .navbar-nav > .open > a:focus {
+        background-color: #fff !important;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .flex-container > div {
+        background-color: #f1f1f1;
+        padding: 3px;
+        margin: 10px;
+        text-align: center;
+    }
     </style>
 </head>
 
 <body>
     <div class="container-fluid text-center">
-    <h1>MyRecipe</h1>
+    <a href="index.html"><h1>MyRecipe</h1></a>
     </div>
-    <div class="row">
-      <div class="col-sm-8"></div>
-      <div class="col-sm-1"></div>
-      <div class="col-sm-1">Sign In</div>
-      <div class="col-sm-1">Sign Up</div>
-      <div class="col-sm-1">My Page</div>
+    <!-- 개인 메뉴 영역 -->
+    <div class="flex-container">
+        <div>Sign In</div>
+        <div>Sign Up</div>
+        <div>My Page</div>
     </div>
-    <!-- 메뉴 영역 -->
-    <nav class="navbar navbar-default">
+    <!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="197">
         <div class="container-fluid">
         <ul class="nav navbar-nav">
             <li class="dropdown">
@@ -50,12 +69,12 @@
             <li><a href="#">Notice</a></li>
             <li><a href="#">Question</a></li>
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us</a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Structure</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="about.html#history">History</a></li>
+                    <li><a href="about.html#structure">Structure</a></li>
+                    <li><a href="about.html#partners">Partners</a></li>
+                    <li><a href="about.html#contact">Contact Us</a></li>
                 </ul>
             </li>
         </ul>
@@ -95,13 +114,24 @@
     <div class="container-fluid content">
         <h3>여기부터 본문: 오늘의 추천 레시피</h3>
         <h5>그리드 사용예정<h5>
-        전체적으로 구조를 엎을 수 있음 참조할 곳:<br>
+        <p>전체적으로 구조를 엎을 수 있음 참조할 곳:<br>
         https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h<br><br>
         만들면서 든 개인적인 생각(수정사항):<br>
         레시피 등록을 메뉴의 한칸으로만 만들지 말고 좀더 잘보이게 만들기(주된 컨텐츠이고 유인해야 하므로)<br>
         위랑 이어지는건데 메뉴를 좀 손봐서 커뮤니티부분을 빼거나 Question이랑 합치기? 혹은 문의 부분을 about us의 contact로 넣기<br>   
         sign in 부분을 navbar 메뉴 부분 우측정렬로 한줄에 몰아넣기?<br>
-        아무튼 메뉴가 두줄인걸 잘 조화시킬 방법이 필요함
+        아무튼 메뉴가 두줄인걸 잘 조화시킬 방법이 필요함<br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br></p>
     </div>
 <footer class="container-fluid text-center">
   <p>copyright ⓒ MyRecipe 2019</p> 
