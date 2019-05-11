@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&amp;subset=korean" rel="stylesheet">
+    <title>MyRecipe</title>
+    <style>
+    body {
+        position: relative;
+    }
+    .affix {
+        top:0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+    .navbar {
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        background-color: #fada5e;
+        font-size: 14px;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f9a602 !important;
+        background-color: #fff !important;
+    }
+    .navbar .navbar-nav > .open > a,
+    .navbar .navbar-nav > .open > a:hover,
+    .navbar .navbar-nav > .open > a:focus {
+        background-color: #fff !important;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .flex-container > div {
+        background-color: #f1f1f1;
+        padding: 3px;
+        margin: 10px;
+        text-align: center;
+    }
+    .navbar-toggle {
+        background-color: #fada5e !important;
+    }
+    .content {
+    	text-align: center;
+    }
+    .col-sm-4 {
+    	padding: 5px;
+    }
+    .col-md-8 {
+        background-color: white;
+        padding: 40px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px
+    }
+    .bg {
+        background-image: url('/image');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .h1-responsive {
+        font-family: 'Yeon Sung', sans-serif;
+        line-height: 1.6
+    }
+    .btn {
+        padding: 10px 20px;
+        background-color: #f9a602;
+        color: #fff;
+        border-color: #000;
+        border-radius: 0;
+        transition: .2s;
+    }
+    .btn:hover, .btn:focus {
+        border: 1px solid #333;
+        background-color: #fff;
+        color: #000;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid text-center">
+    <a href="index.html"><h1>MyRecipe</h1></a>
+    </div>
+    <!-- 개인 메뉴 영역 -->
+    <div class="flex-container">
+        <div>Sign In</div>
+        <div>Sign Up</div>
+        <div>My Page</div>
+    </div>
+    <!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">MyRecipe(logo)</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Recipe Search</a></li>
+                    <li><a href="#">Recipe Share</a></li>
+                </ul>
+            </li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="question.html">Question</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html#history">History</a></li>
+                    <li><a href="about.html#structure">Structure</a></li>
+                    <li><a href="about.html#partners">Partners</a></li>
+                    <li><a href="about.html#contact">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+<!-- 메뉴 끝, 내용 영역 시작 -->
+<div class="container-fluid content">
+<div class="bg">
+<div class="row">
+<br><br><br><br><br><br><br><br>
+<div class="col-md-8 col-md-offset-2">
+<div class="col-md-6 text-center">
+<h2 class="h1-responsive">오늘 저녁은 또 뭐 해먹지?<br>사다 먹자니 월급이 통장에 스치운다...</h2>
+<h2>Search on MyRecipe Now!<h2>
+</div>
+<div class="col-md-6">
+<br><br>
+    <form>
+        <div class="input-group">
+        <input type="text" class="form-control input-lg" placeholder="Search For Your Meal!">
+        <div class="input-group-btn">
+        <button class="btn btn-primary btn-lg" type="submit">
+        <i class="glyphicon glyphicon-search"></i> Search
+        </button>
+        </div>
+        </div>
+    </form>
+    <br>
+</div>
+</div>
+</div>
+<br><br><br><br><br><br><br><br>
+</div>
+<br><br><br><br>
+<!-- 추천 레시피 섹션 -->
+<h1>Today's Most Popular</h1>
+	<div class="row">
+    	<div class="col-sm-4">
+      		<p><img src="1.jpg" class="img-thumbnail" width="50%"></p>
+      		<p>김치전</p>
+      		<p>무슨무슨 요리입니다</p>
+      		<p>30분 전 / 좋아요 300개</p>
+    	</div>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-heart"></span>
+      		<h4>LOVE</h4>
+      		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-lock"></span>
+      		<h4>JOB DONE</h4>
+      		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+    	</div>
+    <br><br>
+  	<div class="row">
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-leaf"></span>
+      		<h4>GREEN</h4>
+     		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-certificate"></span>
+     		<h4>CERTIFIED</h4>
+    		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+    	<div class="col-sm-4">
+     		<span class="glyphicon glyphicon-wrench"></span>
+    		<h4>HARD WORK</h4>
+    		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+  	</div>
+        <p>전체적으로 구조를 엎을 수도 있음 빙빙 돌아가는 이미지 부분이 너무 커서...참조할 곳:<br>
+        https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h<br><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br>
+        <h2>some text to make scroll</h2><br></p>
+    </div>
+<footer class="container-fluid text-center">
+  <p>copyright ⓒ MyRecipe 2019</p> 
+</footer>
+
+</body>
+</html>
