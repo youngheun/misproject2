@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>MyRecipe</title>
+    <style>
+    body {
+        position: relative;
+    }
+    .affix {
+        top:0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+    .navbar {
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        background-color: #fada5e;
+        font-size: 14px;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f9a602 !important;
+        background-color: #fff !important;
+    }
+    .navbar .navbar-nav > .open > a,
+    .navbar .navbar-nav > .open > a:hover,
+    .navbar .navbar-nav > .open > a:focus {
+        background-color: #fff !important;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .flex-container > div {
+        background-color: #f1f1f1;
+        padding: 3px;
+        margin: 10px;
+        text-align: center;
+    }
+    #history {padding-top:40px;padding-bottom: 10px;}
+    #structure {padding-top:40px;}
+    #partners {padding-top:40px;}
+    #contact {padding-top:40px;padding-bottom: 10px;}
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid text-center">
+    <a href="index.html"><h1>MyRecipe</h1></a>
+    </div>
+    <!-- 개인 메뉴 영역 -->
+    <div class="flex-container">
+        <div>Sign In</div>
+        <div>Sign Up</div>
+        <div>My Page</div>
+    </div>
+    <!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100">
+        <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Recipe Search</a></li>
+                    <li><a href="#">Recipe Share</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Notice</a></li>
+            <li><a href="#">Question</a></li>
+            <li class="dropdown active">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#structure">Structure</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    <!-- 메뉴 끝, 내용 영역 시작 -->
+    <!-- 역사 -->
+    <div id="history" class="container-fluid">
+        <h1>History</h1>
+        <p>역사가 들어갑니다.</p>
+        <p>내비게이션 바의 메뉴를 누르면 해당 위치로 이동합니다.</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+    </div>
+    <div id="structure" class="container-fluid">
+        <h1>Structure</h1>
+        <p>조직구조가 들어갑니다.</p>
+        <p>내비게이션 바의 메뉴를 누르면 해당 위치로 이동합니다.</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+    </div>
+    <div id="partners" class="container-fluid">
+        <h1>Partners</h1>
+        <p>파트너 기업이 들어갑니다.</p>
+        <p>내비게이션 바의 메뉴를 누르면 해당 위치로 이동합니다.</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+        <p>스크롤 실험을 위한 텍스트</p>
+    </div>
+    <div id="contact" class="container-fluid">
+        <h1>Contact Us</h1>
+        <p>연락처</p>
+        <p>전송 폼이 들어갈 예정</p>
+    </div>
+<footer class="container-fluid text-center">
+  <p>copyright ⓒ MyRecipe 2019</p> 
+</footer>
+
+</body>
+</html>
