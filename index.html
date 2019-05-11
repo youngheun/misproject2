@@ -41,6 +41,9 @@
         margin: 10px;
         text-align: center;
     }
+    .navbar-toggle {
+        background-color: #fada5e !important;
+    }
     </style>
 </head>
 
@@ -57,6 +60,14 @@
     <!-- 전체 메뉴 영역 -->
     <nav class="navbar navbar-default" data-spy="affix" data-offset-top="197">
         <div class="container-fluid">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
@@ -78,7 +89,7 @@
                 </ul>
             </li>
         </ul>
-    </div>
+        </div>
     </nav>
     <!-- 메뉴 끝, 내용 영역 시작 -->
     <!-- Carousel -->
