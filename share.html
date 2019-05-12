@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>MyRecipe</title>
+    <style>
+    body {
+        position: relative;
+    }
+    .affix {
+        top:0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+    .navbar {
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        background-color: #fada5e;
+        font-size: 14px;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f9a602 !important;
+        background-color: #fff !important;
+    }
+    .navbar .navbar-nav > .open > a,
+    .navbar .navbar-nav > .open > a:hover,
+    .navbar .navbar-nav > .open > a:focus {
+        background-color: #fff !important;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .flex-container > div {
+        background-color: #f1f1f1;
+        padding: 3px;
+        margin: 10px;
+        text-align: center;
+    }
+    .navbar-toggle {
+        background-color: #fada5e !important;
+    }
+    .content {
+    	text-align: center;
+    }
+    .entry:not(:first-of-type) {
+        margin-top: 10px;
+    }
+    .glyphicon {
+        font-size: 12px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid text-center">
+    <a href="index.html"><h1>MyRecipe</h1></a>
+    </div>
+    <!-- 개인 메뉴 영역 -->
+    <div class="flex-container">
+        <div>My Page</div>
+        <div>Sign Up</div>
+        <div>Sign In</div>
+    </div>
+    <!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">MyRecipe(logo)</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Recipe Search</a></li>
+                    <li class="active"><a href="share.html">Recipe Share</a></li>
+                </ul>
+            </li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="question.html">Question</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html#history">History</a></li>
+                    <li><a href="about.html#structure">Structure</a></li>
+                    <li><a href="about.html#partners">Partners</a></li>
+                    <li><a href="about.html#contact">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+    <!-- 메뉴 끝, 내용 영역 시작 -->
+<div class="container-fluid">
+    <h1>Recipe Share</h1>
+    <h3>전세계의 사람들에게 당신만의 레시피를 공유해 보세요.</h3>
+    <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h2>레시피를 공유합니다.</h2>
+        <h4>레시피에 대한 설명을 적어주세요. 여기에는 폼이 들어갈 것입니다.<br>폼의 구성물: 조리시간, 난이도, 재료 리스트, 레시피 내용(사진 첨부 지원), 태그 정보, (국가-분류, 상황)</h4>
+        <form class="form-horizontal" action="success.html">
+            <div class="form-group">
+                <label for="recipe name">Recipe Name</label>
+                <input type="text" class="form-control" id="recipe name">
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="thumbnailfile">Recipe Thumbnail</label>
+                    <input type="file" id="thumbnailfile">
+                    <p class="help-block">Attach an image to introduce your recipe.</p>
+                </div>
+            </div>
+
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="time">cooking time</label>
+            <div class="input-group">
+                <input type="text" class="form-control" name="time">
+                <div class="input-group-btn bs-dropdown-to-select-group">
+                    <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select" data-toggle="dropdown">
+                        <span data-bind="bs-drp-sel-label">Select   </span>
+                        <input type="hidden" name="selected_value" data-bind="bs-drp-sel-value" value="">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="">
+                        <li data-value="1"><a href="#">minutes</a></li>
+                        <li data-value="2"><a href="#">hours</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+                <div class="col-md-3">
+                    <select class="form-control" id="sel1">
+                    <option>minutes</option>
+                    <option>hours</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="difficulty">Difficulty</label>
+                <label class="radio-inline"><input type="radio" name="optradio" checked>★</label>
+                <label class="radio-inline"><input type="radio" name="optradio">★★</label>
+                <label class="radio-inline"><input type="radio" name="optradio">★★★</label>
+                <label class="radio-inline"><input type="radio" name="optradio">★★★★</label>
+                <label class="radio-inline"><input type="radio" name="optradio">★★★★★</label>
+                <br>
+                <label for="ingredients">Ingredients</label>
+                <textarea class="form-control" id="ingredients" name="ingredients" rows="5"></textarea>
+                <br>
+                <label for="ingredients">과정</label>
+                <textarea class="form-control" id="process" name="process" rows="20"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>    
+    </div>
+    </div>
+
+<script type="text/javascript">
+    $(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls form:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+    $(this).parents('.entry:first').remove();
+
+        e.preventDefault();
+        return false;
+    });
+});
+</script>
+<div class="col-md-12">
+      <div class="row">
+      <div class="control-group" id="fields">
+          <label class="control-label" for="field1">
+            Nice Multiple Form Fields
+          </label>
+          <div class="controls">
+            <form role="form" autocomplete="off">
+              <div class="entry input-group col-xs-3">
+                
+             
+                <input class="form-control" name="fields[]" type="text" placeholder="Type something">
+                <span class="input-group-btn">
+              <button class="btn btn-success btn-add" type="button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                </span>
+              </div>
+              
+            </form>
+          </div>
+
+
+
+<div class="input-group">
+  <span class="input-group-addon">Label 2</span>
+  <select id="lunch" class="selectpicker form-control" data-live-search="true" title="Please select a lunch ...">
+    <option>Hot Dog, Fries and a Soda</option>
+    <option>Burger, Shake and a Smile</option>
+    <option>Sugar, Spice and all things nice</option>
+    <option>Baby Back Ribs</option>
+    <option>A really really long option made to illustrate an issue with the live search in an inline form</option>
+  </select>
+</div>
+
+                    <input type="text" class="form-control" id="time">
+                    <span class="input-group-addon"><select class="form-control" id="sel1">
+                    <option>minutes</option>
+                    <option>hours</option>
+                    </select></span>
+
+
+</div>
+
+
+
+    <div class="row">
+        <div class="form-group">
+            <label for="inpuFname">Text input with dropdown select</label>
+            <div class="input-group">
+                <input type="text" value="" class="form-control" name="text">
+                <div class="input-group-btn bs-dropdown-to-select-group">
+                    <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select" data-toggle="dropdown">
+                        <span data-bind="bs-drp-sel-label">Select...</span>
+                        <input type="hidden" name="selected_value" data-bind="bs-drp-sel-value" value="">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" style="">
+                        <li data-value="1"><a href="#">One</a></li>
+                        <li data-value="2"><a href="#">Two</a></li>
+                        <li data-value="3"><a href="#">Three</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer class="container-fluid text-center">
+  <p>copyright ⓒ MyRecipe 2019</p> 
+</footer>
+
+</body>
+</html>
