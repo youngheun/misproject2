@@ -47,19 +47,6 @@
     .content {
     	text-align: center;
     }
-    .entry:not(:first-of-type) {
-        margin-top: 10px;
-    }
-    .glyphicon {
-        font-size: 12px;
-    }
-    .input-group-btn select {
-        border-color: #ccc;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        padding-top: 7px;
-        padding-bottom: 7px;
-    }
     </style>
 </head>
 
@@ -110,70 +97,15 @@
     </nav>
     <!-- 메뉴 끝, 내용 영역 시작 -->
 <div class="container-fluid">
-    <h1>Recipe Share</h1>
-    <h3>전세계의 사람들에게 당신만의 레시피를 공유해 보세요.</h3>
-    <div class="row">
+    <h1>Recipe Share Success!</h1>
+    <h3>레시피를 성공적으로 공유했습니다. 감사합니다.</h3>
+    <div class="row" align="center">
     <div class="col-md-4 col-md-offset-4">
-        <h4>분류를 어떻게 입력하게 할 것인지 고민(현재는 태그로 만들어 놓았음)</h4>
-        <form class="form-horizontal" action="success.html">
-            <div class="form-group">
-                <label for="recipe name">Recipe Name</label>
-                <input type="text" class="form-control" id="recipe name">
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="thumbnailfile">Recipe Thumbnail</label>
-                    <input type="file" id="thumbnailfile">
-                    <p class="help-block">Attach an image to introduce your recipe.</p>
-                </div>
-            </div>
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label>Cooking Time</label>
-            <div class="input-group">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-            <select class="btn">
-            <option>minutes</option>
-            <option>hours</option>
-            </select>
-            </span>
-            </div>
-        </div>
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label for="yield">Yield</label>
-            <input type="text" class="form-control" id="yield">
-        </div>
+        <button type="button" class="btn btn-lg btn-primary">다른 사람들의 레시피 보러 가기</button>
+        <button type="button" class="btn btn-lg btn-success">홈으로 돌아가기</button>
     </div>
     </div>
-            <div class="form-group">
-                <label for="difficulty">Difficulty</label>
-                <label class="radio-inline"><input type="radio" name="optradio" checked>★</label>
-                <label class="radio-inline"><input type="radio" name="optradio">★★</label>
-                <label class="radio-inline"><input type="radio" name="optradio">★★★</label>
-                <label class="radio-inline"><input type="radio" name="optradio">★★★★</label>
-                <label class="radio-inline"><input type="radio" name="optradio">★★★★★</label>
-            </div>
-            <div class="form-group">
-                <label for="ingredients">Ingredients</label>
-                <textarea class="form-control" id="ingredients" name="ingredients" rows="5"></textarea>
-                <br>
-                <label for="method">Method</label>
-                <textarea class="form-control" id="method" name="method" rows="20"></textarea>
-            </div>
-        <div class="form-group">
-            <label for="tag">Tags</label>
-            <input type="text" class="form-control" id="tag" placeholder="add some tags to describe your recipe. #Korean #Daily #Vegetable #Seasoned">
-        </div>
-
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>    
-    </div>
-    </div>
-
 </div>
-
 
 <footer class="container-fluid text-center">
   <p>copyright ⓒ MyRecipe 2019</p> 
