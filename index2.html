@@ -5,11 +5,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&amp;subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
     <title>MyRecipe</title>
     <style>
+    header {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
     body {
         position: relative;
+        font-family: 'Roboto', sans-serif;
     }
     .affix {
         top:0;
@@ -63,22 +68,25 @@
         background-position: center center;
         background-size: cover;
     }
-    .h1-responsive {
-        font-family: 'Yeon Sung', sans-serif;
-        line-height: 1.6
-    }
     .btn {
-        padding: 10px 20px;
-        background-color: #f9a602;
         color: #fff;
-        border-color: #000;
-        border-radius: 0;
-        transition: .2s;
+        background-color: #f8585b;
+        border: #f8585b solid 2px;
+        padding: 9px 19px 9px 19px;
+        text-decoration: none;
+        border-radius: 0px !important;
+        font-weight: bold;
     }
-    .btn:hover, .btn:focus {
-        border: 1px solid #333;
-        background-color: #fff;
-        color: #000;
+    .btn:hover {
+        color: #ffffff;
+        background-color: #f8585b;
+    }
+    .btn-xl {
+        font-size: 20px;
+        padding: 12px 40px 12px 40px;
+    }
+    .adcopy {
+        font-family: 'Open Sans', sans-serif;
     }
     </style>
 </head>
@@ -135,8 +143,7 @@
 <br><br><br><br><br><br><br><br>
 <div class="col-md-8 col-md-offset-2">
 <div class="col-md-6 text-center">
-<h2 class="h1-responsive">오늘 저녁은 또 뭐 해먹지?<br>사다 먹자니 월급이 통장에 스치운다...</h2>
-<h2>Search on MyRecipe Now!<h2>
+<h1 class="adcopy">Search on MyRecipe Now!<h1>
 </div>
 <div class="col-md-6">
 <br><br>
@@ -144,7 +151,7 @@
         <div class="input-group">
         <input type="text" class="form-control input-lg" placeholder="Search For Your Meal!">
         <div class="input-group-btn">
-        <button class="btn btn-primary btn-lg" type="submit">
+        <button class="btn btn-lg" type="submit">
         <i class="glyphicon glyphicon-search"></i> Search
         </button>
         </div>
@@ -158,15 +165,15 @@
 </div>
 <!-- 레시피 공유 섹션 -->
 <br><br><br><br>
-    <div class="container-fluid">
-    <a href="share.html"><button class="btn btn-primary btn-lg" type="submit">나만의 레시피 공유하기</button></a><br><br>
-    <h3>이번주의 베스트 공유맨 명예의 전당</h3><br>
+    <div class="container-fluid content">
+    <a href="share.html"><button class="btn btn-xl" type="submit">Share My Recipe</button></a><br><br>
+    <h3>This Week's Best Contributor</h3><br>
     <div class="row">
     <div class="col-md-6 col-md-offset-3">
     <ul class="list-group">
-        <li class="list-group-item">철수 <span class="badge">16</span></li>
-        <li class="list-group-item">영희 <span class="badge">7</span></li> 
-        <li class="list-group-item">바둑이 <span class="badge">6</span></li> 
+        <li class="list-group-item">Anne <span class="badge">16</span></li>
+        <li class="list-group-item">Bill <span class="badge">7</span></li> 
+        <li class="list-group-item">Cassie <span class="badge">6</span></li> 
     </ul>
     </div>
     </div>
