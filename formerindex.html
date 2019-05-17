@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
     <title>MyRecipe</title>
     <style>
     header {
@@ -14,7 +13,6 @@
     }
     body {
         position: relative;
-        font-family: 'Roboto', sans-serif;
     }
     .affix {
         top:0;
@@ -27,36 +25,25 @@
         border: 0;
         border-radius: 0;
         margin-bottom: 0;
-        background-image: linear-gradient(to right, #ffca28, #ffa040, #ff7073, #ff4db1, #ff59f1);
-        font-size: 16px;
+        background-color: #fada5e;
+        font-size: 15px;
         text-align: center;
     }
     .navbar a {
         width: 100px;
-        color: #fff !important;
     }
     .navbar-brand {
         width: 100px !important;
     }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f9a602 !important;
+        background-color: #fff !important;
+    }
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: rgba( 255, 255, 255, 0.3 );
-		color: #fff;
+        background-color: #fff !important;
     }
-    .navbar-nav > li > ul > li > a:hover {
-        color: #f9a602 !important;
-        background-color: #FFF !important;
-    }
-    .navbar-nav > li > ul > li > a {
-        color: #424242 !important;
-    }
-    .navbar-toggle, .icon-bar {
-		border:1px solid #fff;
-	}
-	button.navbar-toggle{
-		border-color: #fff !important;
-	}
     .flex-container {
         display: flex;
         flex-direction: row-reverse;
@@ -65,50 +52,21 @@
         padding: 3px;
         margin: 10px;
         text-align: center;
-        color: #424242;
     }
     .navbar-toggle {
-        background-color: #FFCA28 !important;
+        background-color: #fada5e !important;
     }
     .content {
     	text-align: center;
-        padding-top: 40px;
-        padding-bottom: 40px;
     }
     .col-sm-4 {
     	padding: 5px;
     }
-    .bg-gray {
-        background-color: #EEE;
+    .carousel {
+        width: 800px;
     }
-    .btn {
-        color: #fff;
-        background-color: #f8585b;
-        border: #f8585b solid 2px;
-        padding: 9px 19px 9px 19px;
-        text-decoration: none;
-        border-radius: 0px !important;
-        font-weight: bold;
-    }
-    .btn:hover {
-        color: #f8585b;
-        background-color: #fff;
-    }
-    .btn-xl {
-        font-size: 20px;
-        padding: 12px 40px 12px 40px;
-    }
-    .adcopy {
-        font-family: 'Open Sans', sans-serif;
-    }
-	.input-lg {
-		border-radius: 0px !important;
-	}
-    footer {
-        background-color: #424242;
-        color: #fff;
-        padding-top: 50px;
-        padding-bottom: 40px;
+    .carousel-inner > .item {
+        width: 800px;
     }
     </style>
 </head>
@@ -167,8 +125,7 @@
     </nav>
 <!-- 메뉴 끝, 내용 영역 시작 -->
 <!-- Carousel -->
-
-<div id="Carousel" class="carousel slide" data-ride="carousel">
+<div id="Carousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
         <ol class="carousel-indicators">
         <li data-target="#Carousel" data-slide-to="0" class="active"></li>
@@ -176,7 +133,7 @@
         <li data-target="#Carousel" data-slide-to="2"></li>
         </ol>
     <!-- Wrapper for slides -->
-        <div class="carousel-inner center-block" role="listbox">
+        <div class="carousel-inner" role="listbox">
         <div class="item active">
         <img src="carousel1.jpg" class="img-responsive center-block">
         </div>
@@ -202,7 +159,7 @@
 <br><br>
 <div class="row">
 <div class="col-md-4 col-md-offset-2">
-<h1 class="adcopy">Search on MyRecipe Now!<h1>
+<h2 class="h1-responsive">Search on MyRecipe Now!<h2>
 </div>
 <div class="col-md-4">
 <br>
@@ -210,7 +167,7 @@
         <div class="input-group">
         <input type="text" class="form-control input-lg" placeholder="Search For Your Meal!">
         <div class="input-group-btn">
-        <button class="btn btn-lg" type="submit">
+        <button class="btn btn-primary btn-lg" type="submit">
         <i class="glyphicon glyphicon-search"></i> Search
         </button>
         </div>
@@ -222,19 +179,20 @@
 </div>
 <br><br><br><br><br>
 <!-- 레시피 공유 섹션 -->
-    <div class="container-fluid content bg-gray">
-    <h3>This Week's Best Contributor</h3><br>
+    <div class="container-fluid content">
+    <a href="share.html"><button class="btn btn-primary btn-lg" type="submit">나만의 레시피 공유하기</button></a><br><br>
+    <h3>이번주의 베스트 공유맨 명예의 전당</h3><br>
     <div class="row">
     <div class="col-md-6 col-md-offset-3">
     <ul class="list-group">
-        <li class="list-group-item">Anne <span class="badge">16</span></li>
-        <li class="list-group-item">Bill <span class="badge">7</span></li> 
-        <li class="list-group-item">Cassie <span class="badge">6</span></li> 
+        <li class="list-group-item">철수 <span class="badge">16</span></li>
+        <li class="list-group-item">영희 <span class="badge">7</span></li> 
+        <li class="list-group-item">바둑이 <span class="badge">6</span></li> 
     </ul>
     </div>
     </div>
-    <a href="share.html"><button class="btn btn-xl" type="submit">Share My Recipe</button></a><br><br>
     </div>
+<br><br><br><br>
 <!-- 추천 레시피 섹션 -->
 <div class="container-fluid content">
 <h3>Today's Most Popular</h3>
@@ -274,10 +232,9 @@
     		<p>Lorem ipsum dolor sit amet..</p>
     	</div>
   	</div>
-        <p>전체적으로 구조를 엎을 수도 있음 carousel 부분이 너무 커서...참조할 곳:<br>
+        <p>전체적으로 구조를 엎을 수도 있음 빙빙 돌아가는 이미지 부분이 너무 커서...참조할 곳:<br>
         https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h<br><br></p>
     </div>
-
 <footer class="container-fluid text-center">
   <p>copyright ⓒ MyRecipe 2019</p> 
 </footer>
