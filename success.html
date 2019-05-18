@@ -5,10 +5,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>MyRecipe</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
+    <title>YumCipe</title>
     <style>
+    header {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
     body {
         position: relative;
+        font-family: 'Roboto', sans-serif;
     }
     .affix {
         top:0;
@@ -16,44 +22,116 @@
         z-index: 9999 !important;
     }
     .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
         border: 0;
         border-radius: 0;
         margin-bottom: 0;
-        background-color: #fada5e;
-        font-size: 14px;
+        background-image: linear-gradient(to right, #ffca28, #ffa040, #ff7073, #ff4db1, #ff59f1);
+        font-size: 16px;
+        text-align: center;
     }
-    .navbar-nav li a:hover, .navbar-nav li.active a {
-        color: #f9a602 !important;
-        background-color: #fff !important;
+    .navbar a {
+        width: 100px;
+        color: #fff !important;
+    }
+    .navbar-brand {
+        width: 100px !important;
     }
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: #fff !important;
+        background-color: #FFCA28;
+    }
+    .navbar-nav > li > ul > li > a:hover {
+        color: #f9a602 !important;
+        background-color: #FFF !important;
+    }
+    .navbar-nav > li > ul > li > a {
+        color: #424242 !important;
+    }
+    .navbar-toggle, .icon-bar {
+        border:1px solid #fff;
+    }
+    button.navbar-toggle{
+        border-color: #fff !important;
     }
     .flex-container {
         display: flex;
         flex-direction: row-reverse;
     }
     .flex-container > div {
-        background-color: #f1f1f1;
         padding: 3px;
         margin: 10px;
         text-align: center;
+        color: #424242;
     }
     .navbar-toggle {
-        background-color: #fada5e !important;
+        background-color: #ff59f1 !important;
     }
     .content {
-    	margin: 10px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .col-sm-4 {
+        padding: 5px;
+    }
+    .bg-gray {
+        background-color: #EEE;
+    }
+    .btn-submit {
+        color: #fff;
+        background-color: #f8585b;
+        border: #f8585b solid 2px;
+        padding: 9px 19px 9px 19px;
+        text-decoration: none;
+        border-radius: 0px !important;
+        font-weight: bold;
+    }
+    .btn-submit:hover {
+        color: #f8585b;
+        background-color: #fff;
+    }
+    .btn-xl {
+        font-size: 20px;
+        padding: 12px 40px 12px 40px;
+    }
+    .opsans {
+        font-family: 'Open Sans', sans-serif;
+    }
+    .input-lg {
+        border-radius: 0px !important;
+    }
+    footer {
+        background-color: #424242;
+        color: #fff;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+    .entry:not(:first-of-type) {
+        margin-top: 10px;
+    }
+    .input-group-btn select {
+        border-color: #ccc;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid text-center">
-    <a href="index.html"><h1>MyRecipe</h1></a>
+<!-- 타이틀 영역 -->
+<header>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+    <a href="index.html"><img src="logo.png" width="500" style="display:block; width:100%; max-width:500px text-center"></a>
     </div>
+    </div>
+    </div>
+</header>
     <!-- 개인 메뉴 영역 -->
     <div class="flex-container">
         <div>My Page</div>
