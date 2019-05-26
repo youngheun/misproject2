@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
+    <title>YumCipe</title>
+    <style>
+    body {
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+    }
+    nav {
+        position: fixed;
+        width: 100%;
+        background-color:transparent !important;
+        box-sizing: border-box;
+        transition: background-image 1s ease;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: none;
+        border-color: transparent !important;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        text-align: center;
+        z-index: 9999;
+    }
+    nav.scroll {
+    background-image: linear-gradient(to right, #ffca28, #ffb41a, #ff9d14, #ff8418, #ff6b21);
+    }
+
+    nav.scroll a {
+        color: #fff !important;
+    }
+    .navbar a {
+        width: 100px;
+        color: #fff !important;
+    }
+    .navbar-brand {
+        width: 100px !important;
+    }
+    .navbar .navbar-nav > .open > a,
+    .navbar .navbar-nav > .open > a:hover,
+    .navbar .navbar-nav > .open > a:focus {
+        background-color: transparent;
+        color: #fff;
+    }
+    .navbar-nav > li > ul > li > a:hover {
+        color: #f9a602 !important;
+        background-color: #FFF !important;
+    }
+    .navbar-nav > li > ul > li > a {
+        color: #424242 !important;
+    }
+    .navbar-toggle, .icon-bar {
+        border:1px solid #fff;
+    }
+    button.navbar-toggle{
+        border-color: #fff !important;
+    }
+    .navbar-toggle {
+        background-color: #ff6b21 !important;
+    }
+    .content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .col-sm-4 {
+        padding: 5px;
+    }
+    .bg-gray {
+        background-color: #EEE;
+    }
+    .btn {
+        color: #fff;
+        background-color: #f8585b;
+        border: #f8585b solid 2px;
+        padding: 9px 19px 9px 19px;
+        text-decoration: none;
+        border-radius: 0px !important;
+        font-weight: bold;
+    }
+    .btn:hover {
+        color: #f8585b;
+        background-color: #fff;
+    }
+    .btn-xl {
+        font-size: 20px;
+        padding: 12px 40px 12px 40px;
+    }
+    .opsans {
+        font-family: 'Open Sans', sans-serif;
+    }
+    .input-lg {
+        border-radius: 0px !important;
+    }
+    footer {
+        background-color: #424242;
+        color: #fff;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+    .col-md-8 {
+        background-color: white;
+        padding: 40px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px
+    }
+    .bg {
+        background-image: url('food5.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    </style>
+<script>
+jQuery(window).scroll(function(){
+    var fromTopPx = 200; // distance to trigger
+    var scrolledFromtop = jQuery(window).scrollTop();
+    if(scrolledFromtop > fromTopPx){
+        jQuery('nav').addClass('scroll');
+    }else{
+        jQuery('nav').removeClass('scroll');
+    }
+});
+</script>
+</head>
+
+<body>
+    <div class="text-center">
+    <!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Recipe Search</a></li>
+                    <li><a href="share.html">Recipe Share</a></li>
+                </ul>
+            </li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="question.html">Question</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html#history">History</a></li>
+                    <li><a href="about.html#structure">Structure</a></li>
+                    <li><a href="about.html#partners">Partners</a></li>
+                    <li><a href="about.html#contact">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign Up</a></li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+<!-- 메뉴 끝, 내용 영역 시작 -->
+<div class="bg">
+<div class="row">
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-md-8 col-md-offset-2">
+<div class="col-md-6 text-center">
+<h1 class="opsans">Search on YumCipe Now!<h1>
+</div>
+<div class="col-md-6">
+<br>
+    <form>
+        <div class="input-group">
+        <input type="text" class="form-control input-lg" placeholder="Search For Your Meal!">
+        <div class="input-group-btn">
+        <button class="btn btn-lg" type="submit">
+        <i class="glyphicon glyphicon-search"></i> Search
+        </button>
+        </div>
+        </div>
+    </form>
+    <br>
+</div>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<!-- 레시피 공유 섹션 -->
+    <div class="container-fluid content">
+    <a href="share.html"><button class="btn btn-xl" type="submit">Share My Recipe</button></a><br><br>
+    <h3>This Week's Best Contributor</h3><br>
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <ul class="list-group">
+        <li class="list-group-item">Anne <span class="badge">16</span></li>
+        <li class="list-group-item">Bill <span class="badge">7</span></li> 
+        <li class="list-group-item">Cassie <span class="badge">6</span></li> 
+    </ul>
+    </div>
+    </div>
+    </div>
+<br><br><br><br>
+<!-- 추천 레시피 섹션 -->
+<div class="container-fluid bg-gray">
+<h1>Today's Most Popular</h1>
+	<div class="row">
+    	<div class="col-sm-4">
+      		<p><img src="1.jpg" class="img-thumbnail" width="50%"></p>
+      		<p>김치전</p>
+      		<p>무슨무슨 요리입니다</p>
+      		<p>30분 전 / 좋아요 300개</p>
+    	</div>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-heart"></span>
+      		<h4>LOVE</h4>
+      		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-lock"></span>
+      		<h4>JOB DONE</h4>
+      		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+    	</div>
+    <br><br>
+  	<div class="row">
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-leaf"></span>
+      		<h4>GREEN</h4>
+     		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+    	<div class="col-sm-4">
+      		<span class="glyphicon glyphicon-certificate"></span>
+     		<h4>CERTIFIED</h4>
+    		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+    	<div class="col-sm-4">
+     		<span class="glyphicon glyphicon-wrench"></span>
+    		<h4>HARD WORK</h4>
+    		<p>Lorem ipsum dolor sit amet..</p>
+    	</div>
+  	</div>
+</div>
+        <p>전체적으로 구조를 엎을 수도 있음 빙빙 돌아가는 이미지 부분이 너무 커서...참조할 곳:<br>
+        https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h<br><br>
+<footer class="container-fluid text-center">
+  <p>copyright ⓒ YumCipe 2019</p> 
+</footer>
+
+</body>
+</html>
