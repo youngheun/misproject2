@@ -8,19 +8,30 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
     <title>YumCipe</title>
     <style>
+    html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
     body {
         position: relative;
         font-family: 'Roboto', sans-serif;
+        height: 100%;
+        width: 100%;
+        margin: 0;
     }
     nav {
         position: fixed;
         width: 100%;
         background-color:transparent !important;
         box-sizing: border-box;
-        transition: background-image 1s ease;
         padding-top: 10px;
         padding-bottom: 10px;
         border: none;
+        -webkit-transition: all 1.5s ease;
+        -moz-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
+        transition: all 1.5s ease;
         border-color: transparent !important;
         border-radius: 0;
         margin-bottom: 0;
@@ -29,11 +40,10 @@
         z-index: 9999;
     }
     nav.scroll {
-    background-image: linear-gradient(to right, #ffca28, #ffb41a, #ff9d14, #ff8418, #ff6b21);
+        background-color: #fff !important;
     }
-
     nav.scroll a {
-        color: #fff !important;
+        color: #424242 !important;
     }
     .navbar a {
         width: 100px;
@@ -62,7 +72,7 @@
         border-color: #fff !important;
     }
     .navbar-toggle {
-        background-color: #ff6b21 !important;
+        background-color: transparent;
     }
     .content {
         padding-top: 40px;
@@ -103,17 +113,23 @@
         padding-top: 50px;
         padding-bottom: 40px;
     }
-    .col-md-8 {
+    .search {
         background-color: white;
         padding: 40px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 5px
+        border-radius: 5px;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 15%;
+        text-align: center;
     }
     .bg {
         background-image: url('food5.jpg');
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center;
         background-size: cover;
+        height: 100%;
+        max-width: 1918px;
     }
     </style>
 <script>
@@ -121,16 +137,15 @@ jQuery(window).scroll(function(){
     var fromTopPx = 200; // distance to trigger
     var scrolledFromtop = jQuery(window).scrollTop();
     if(scrolledFromtop > fromTopPx){
-        jQuery('nav').addClass('scroll');
+        jQuery('nav').addClass('scroll', 1000);
     }else{
-        jQuery('nav').removeClass('scroll');
+        jQuery('nav').removeClass('scroll', 1000);
     }
 });
 </script>
 </head>
 
 <body>
-    <div class="text-center">
     <!-- 전체 메뉴 영역 -->
     <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
         <div class="container-fluid">
@@ -171,14 +186,10 @@ jQuery(window).scroll(function(){
         </div>
     </nav>
 <!-- 메뉴 끝, 내용 영역 시작 -->
-<div class="bg">
-<div class="row">
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<div class="col-md-8 col-md-offset-2">
-<div class="col-md-6 text-center">
+<div class="bg row">
+<div class="search">
 <h1 class="opsans">Search on YumCipe Now!<h1>
-</div>
-<div class="col-md-6">
+<h3>The world's best platform for everyone who wants to enjoy delicious food.</h3>
 <br>
     <form>
         <div class="input-group">
@@ -193,15 +204,11 @@ jQuery(window).scroll(function(){
     <br>
 </div>
 </div>
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
 <!-- 레시피 공유 섹션 -->
-    <div class="container-fluid content">
-    <a href="share.html"><button class="btn btn-xl" type="submit">Share My Recipe</button></a><br><br>
-    <h3>This Week's Best Contributor</h3><br>
+    <div class="container-fluid content text-center">
+    <h1 class="opsans">This Week's Best Contributor</h1><br>
     <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-4 col-md-offset-4">
     <ul class="list-group">
         <li class="list-group-item">Anne <span class="badge">16</span></li>
         <li class="list-group-item">Bill <span class="badge">7</span></li> 
@@ -209,11 +216,13 @@ jQuery(window).scroll(function(){
     </ul>
     </div>
     </div>
+    <br><br>
+    <a href="share.html"><button class="btn btn-xl" type="submit">Share My Recipe</button></a><br><br>
     </div>
 <br><br><br><br>
 <!-- 추천 레시피 섹션 -->
-<div class="container-fluid bg-gray">
-<h1>Today's Most Popular</h1>
+<div class="container-fluid bg-gray text-center">
+<h1 class="opsans">Today's Most Popular</h1>
 	<div class="row">
     	<div class="col-sm-4">
       		<p><img src="1.jpg" class="img-thumbnail" width="50%"></p>
@@ -250,9 +259,11 @@ jQuery(window).scroll(function(){
     		<p>Lorem ipsum dolor sit amet..</p>
     	</div>
   	</div>
-</div>
-        <p>전체적으로 구조를 엎을 수도 있음 빙빙 돌아가는 이미지 부분이 너무 커서...참조할 곳:<br>
+            <p>전체적으로 구조를 엎을 수도 있음 빙빙 돌아가는 이미지 부분이 너무 커서...참조할 곳:<br>
         https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h<br><br>
+        <h1>HIDE DIV ON MOBILE VIEW ONLY</h1>
+        <p>https://stackoverflow.com/questions/16550485/hide-div-tag-on-mobile-view-only</p>
+</div>
 <footer class="container-fluid text-center">
   <p>copyright ⓒ YumCipe 2019</p> 
 </footer>
