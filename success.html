@@ -27,7 +27,7 @@
         border: 0;
         border-radius: 0;
         margin-bottom: 0;
-        background-image: linear-gradient(to right, #ffca28, #ffa040, #ff7073, #ff4db1, #ff59f1);
+        background-image: linear-gradient(to right, #ffca28, #ffb41a, #ff9d14, #ff8418, #ff6b21);
         font-size: 16px;
         text-align: center;
     }
@@ -41,7 +41,8 @@
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: #FFCA28;
+        background-color: rgba( 255, 255, 255, 0.3 );
+        color: #fff;
     }
     .navbar-nav > li > ul > li > a:hover {
         color: #f9a602 !important;
@@ -56,18 +57,8 @@
     button.navbar-toggle{
         border-color: #fff !important;
     }
-    .flex-container {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    .flex-container > div {
-        padding: 3px;
-        margin: 10px;
-        text-align: center;
-        color: #424242;
-    }
     .navbar-toggle {
-        background-color: #ff59f1 !important;
+        background-color: #ff6b21 !important;
     }
     .content {
         padding-top: 40px;
@@ -79,7 +70,7 @@
     .bg-gray {
         background-color: #EEE;
     }
-    .btn-submit {
+    .btn {
         color: #fff;
         background-color: #f8585b;
         border: #f8585b solid 2px;
@@ -88,7 +79,7 @@
         border-radius: 0px !important;
         font-weight: bold;
     }
-    .btn-submit:hover {
+    .btn:hover {
         color: #f8585b;
         background-color: #fff;
     }
@@ -123,6 +114,7 @@
 
 <body>
 <!-- 타이틀 영역 -->
+<!-- 타이틀 영역 -->
 <header>
     <div class="container-fluid">
     <div class="row">
@@ -132,14 +124,8 @@
     </div>
     </div>
 </header>
-    <!-- 개인 메뉴 영역 -->
-    <div class="flex-container">
-        <div>My Page</div>
-        <div>Sign Up</div>
-        <div>Sign In</div>
-    </div>
-    <!-- 전체 메뉴 영역 -->
-    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100">
+<!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="210">
         <div class="container-fluid">
         <div class="navbar-header">
         <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -147,7 +133,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">MyRecipe(logo)</a>
+        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
@@ -155,7 +141,7 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Recipe Search</a></li>
-                    <li class="active"><a href="share.html">Recipe Share</a></li>
+                    <li><a href="share.html">Recipe Share</a></li>
                 </ul>
             </li>
             <li><a href="community.html">Community</a></li>
@@ -170,23 +156,30 @@
                 </ul>
             </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign Up</a></li>
+        </ul>
         </div>
         </div>
     </nav>
-    <!-- 메뉴 끝, 내용 영역 시작 -->
-<div class="container-fluid">
-    <h1>Recipe Share Success!</h1>
-    <h3>레시피를 성공적으로 공유했습니다. 감사합니다.</h3>
+<!-- 메뉴 끝, 내용 영역 시작 -->
+<div class="container-fluid text-center">
+    <br><br>
+    <h1 class="opsans">Recipe Share Success!</h1>
+    <h3>Thank you for your contribution. You can now search your recipe in YumCipe.</h3>
+    <br><br><br><br>
     <div class="row" align="center">
     <div class="col-md-4 col-md-offset-4">
-        <button type="button" class="btn btn-lg btn-primary">다른 사람들의 레시피 보러 가기</button>
-        <button type="button" class="btn btn-lg btn-success">홈으로 돌아가기</button>
+        <a href="#"><button type="button" class="btn btn-lg" style="margin-right: 20px;">Search Other Recipes</button></a>
+        <a href="index.html"><button type="button" class="btn btn-lg" style="margin-left: 20px;">Return to Home</button></a>
     </div>
     </div>
+    <br><br><br><br>
 </div>
 
 <footer class="container-fluid text-center">
-  <p>copyright ⓒ MyRecipe 2019</p> 
+  <p>copyright ⓒ YumCipe 2019</p> 
 </footer>
 
 </body>

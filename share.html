@@ -27,7 +27,7 @@
         border: 0;
         border-radius: 0;
         margin-bottom: 0;
-        background-image: linear-gradient(to right, #ffca28, #ffa040, #ff7073, #ff4db1, #ff59f1);
+        background-image: linear-gradient(to right, #ffca28, #ffb41a, #ff9d14, #ff8418, #ff6b21);
         font-size: 16px;
         text-align: center;
     }
@@ -41,7 +41,8 @@
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: #FFCA28;
+        background-color: rgba( 255, 255, 255, 0.3 );
+        color: #fff;
     }
     .navbar-nav > li > ul > li > a:hover {
         color: #f9a602 !important;
@@ -51,35 +52,25 @@
         color: #424242 !important;
     }
     .navbar-toggle, .icon-bar {
-		border:1px solid #fff;
-	}
-	button.navbar-toggle{
-		border-color: #fff !important;
-	}
-    .flex-container {
-        display: flex;
-        flex-direction: row-reverse;
+        border:1px solid #fff;
     }
-    .flex-container > div {
-        padding: 3px;
-        margin: 10px;
-        text-align: center;
-        color: #424242;
+    button.navbar-toggle{
+        border-color: #fff !important;
     }
     .navbar-toggle {
-        background-color: #ff59f1 !important;
+        background-color: #ff6b21 !important;
     }
     .content {
         padding-top: 40px;
         padding-bottom: 40px;
     }
     .col-sm-4 {
-    	padding: 5px;
+        padding: 5px;
     }
     .bg-gray {
         background-color: #EEE;
     }
-    .btn-submit {
+    .btnsub {
         color: #fff;
         background-color: #f8585b;
         border: #f8585b solid 2px;
@@ -88,7 +79,7 @@
         border-radius: 0px !important;
         font-weight: bold;
     }
-    .btn-submit:hover {
+    .btn:hover {
         color: #f8585b;
         background-color: #fff;
     }
@@ -99,9 +90,9 @@
     .opsans {
         font-family: 'Open Sans', sans-serif;
     }
-	.input-lg {
-		border-radius: 0px !important;
-	}
+    .input-lg {
+        border-radius: 0px !important;
+    }
     footer {
         background-color: #424242;
         color: #fff;
@@ -153,13 +144,7 @@
     </div>
     </div>
 </header>
-    <!-- 개인 메뉴 영역 -->
-    <div class="flex-container">
-        <div>My Page</div>
-        <div>Sign Up</div>
-        <div>Sign In</div>
-    </div>
-    <!-- 전체 메뉴 영역 -->
+<!-- 전체 메뉴 영역 -->
     <nav class="navbar navbar-default" data-spy="affix" data-offset-top="210">
         <div class="container-fluid">
         <div class="navbar-header">
@@ -191,10 +176,14 @@
                 </ul>
             </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign Up</a></li>
+        </ul>
         </div>
         </div>
     </nav>
-    <!-- 메뉴 끝, 내용 영역 시작 -->
+<!-- 메뉴 끝, 내용 영역 시작 -->
 <div class="container-fluid sharebg" style="background-color: #eee; padding-top: 20px;">
     <div class="row">
     <div class="col-md-6 col-md-offset-3 page" style="background-color: #fff;">
@@ -279,7 +268,7 @@
             <input type="text" class="form-control" id="tag" placeholder="tags">
         </div>
 
-            <button type="submit" class="btn btn-submit btn-xl pull-right">Submit</button>
+            <button type="submit" class="btn btnsub btn-submit btn-xl pull-right">Submit</button>
         </form>
     </div>
     </div>
@@ -287,7 +276,7 @@
 
 
 <footer class="container-fluid text-center">
-  <p>copyright ⓒ MyRecipe 2019</p> 
+  <p>copyright ⓒ YumCipe 2019</p> 
 </footer>
 
 </body>
