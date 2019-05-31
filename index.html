@@ -27,7 +27,7 @@
         border: 0;
         border-radius: 0;
         margin-bottom: 0;
-        background-image: linear-gradient(to right, #ffca28, #ffb41a, #ff9d14, #ff8418, #ff6b21);
+        background-image: linear-gradient(to right, #ae9576, #99866d, #5d5954);
         font-size: 16px;
         text-align: center;
     }
@@ -61,8 +61,8 @@
         background-color: #ff6b21 !important;
     }
     .content {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     .col-sm-4 {
     	padding: 5px;
@@ -72,15 +72,15 @@
     }
     .btn {
         color: #fff;
-        background-color: #f8585b;
-        border: #f8585b solid 2px;
+        background-color: #836947;
+        border: #836947 solid 2px;
         padding: 9px 19px 9px 19px;
         text-decoration: none;
         border-radius: 0px !important;
         font-weight: bold;
     }
     .btn:hover {
-        color: #f8585b;
+        color: #836947;
         background-color: #fff;
     }
     .btn-xl {
@@ -98,6 +98,15 @@
         color: #fff;
         padding-top: 50px;
         padding-bottom: 40px;
+    }
+    .modal-header, h4, .close {
+        background-color: #5d5954;
+        color:white !important;
+        text-align: center;
+        font-size: 30px;
+    }
+    .modal-footer {
+        background-color: #eee;
     }
     </style>
 </head>
@@ -146,12 +155,45 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign In</a></li>
+        <li id="loginclick"><a>Sign In</a></li>
         <li><a href="#">Sign Up</a></li>
         </ul>
         </div>
         </div>
     </nav>
+<!-- Modal -->
+<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px; text-align: center;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox" align="right">
+              <label><input type="checkbox">Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p>Not a member? <a href="#">Sign Up</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+
 <!-- 메뉴 끝, 내용 영역 시작 -->
 <!-- Carousel -->
 
@@ -165,13 +207,13 @@
     <!-- Wrapper for slides -->
         <div class="carousel-inner center-block" role="listbox">
         <div class="item active">
-        <img src="carousel1.png" class="img-responsive center-block" style="width:1900px;">
+        <img src="carousel1.png" class="img-responsive center-block" style="max-width:1919px;">
         </div>
         <div class="item">
-        <img src="carousel2.png" class="img-responsive center-block" style="width:1900px;">
+        <img src="carousel2.png" class="img-responsive center-block" style="max-width:1919px;">
         </div>
         <div class="item">
-        <img src="carousel3.png" class="img-responsive center-block" style="width:1900px;">
+        <img src="carousel3.png" class="img-responsive center-block" style="max-width:1919px;">
         </div>
         </div>
     <!-- Left and right controls -->
@@ -185,8 +227,7 @@
         </a>
     </div>
 <!-- Carousel Finish, Search Section -->
-<div class="container-fluid text-center">
-<br><br>
+<div class="container-fluid text-center content">
 <div class="row">
 <div class="col-md-4 col-md-offset-2">
 <h1 class="opsans">Search on YumCipe Now!<h1>
@@ -207,24 +248,24 @@
 </div>
 </div>
 </div>
-<br><br><br><br><br>
 <!-- 레시피 공유 섹션 -->
     <div class="container-fluid content bg-gray text-center">
-    <h2 class="opsans">This Week's Best Contributor</h2><br>
+    <h1 class="opsans">This Week's Best Contributor</h1><br><br>
     <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-4 col-md-offset-4">
     <ul class="list-group">
-        <li class="list-group-item">Anne <span class="badge">16</span></li>
-        <li class="list-group-item">Bill <span class="badge">7</span></li> 
-        <li class="list-group-item">Cassie <span class="badge">6</span></li> 
+        <li class="list-group-item"><div class="profilepic"><img src="profile1.png" class="img-responsive" style="float: left; width:25px"></div>
+Hamji_Ham <span class="badge">16</span></li>
+        <li class="list-group-item"><div class="profilepic"><img src="profile2.png" class="img-responsive" style="float: left; width:25px"></div>Foodie Kim <span class="badge">7</span></li> 
+        <li class="list-group-item"><div class="profilepic"><img src="profile3.png" class="img-responsive" style="float: left; width:25px"></div>mis_0619 <span class="badge">6</span></li> 
     </ul>
     </div>
-    </div>
+    </div><br>
     <a href="share.html"><button class="btn btn-xl" type="submit">Share My Recipe</button></a><br><br>
     </div>
 <!-- 추천 레시피 섹션 -->
 <div class="container-fluid content text-center">
-<h2 class="opsans">Today's Most Popular</h2>
+<h1 class="opsans">Today's Most Popular</h1><br><br>
 	<div class="row">
     	<div class="col-sm-4">
       		<p><img src="1.jpg" class="img-thumbnail" width="50%"></p>
@@ -268,6 +309,12 @@
 <footer class="container-fluid text-center">
   <p>copyright ⓒ YumCipe 2019</p> 
 </footer>
-
+<script>
+$(document).ready(function(){
+  $("#loginclick").click(function(){
+    $("#loginmodal").modal();
+  });
+});
+</script>
 </body>
 </html>
