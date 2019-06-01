@@ -29,19 +29,24 @@
         margin-bottom: 0;
         background-image: linear-gradient(to right, #ae9576, #99866d, #5d5954);
         font-size: 16px;
-        text-align: center;
+        text-align: center !important;
     }
     .navbar a {
-        width: 100px;
+        width: 110px;
         color: #fff !important;
+    }
+    .longnavbar {
+    	width: 140px !important;
     }
     .navbar-brand {
         width: 100px !important;
+        background-color: transparent !important;
     }
+    .navbar .navbar-nav a:hover,
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: rgba( 255, 255, 255, 0.3 );
+        background-color: rgba( 255, 255, 255, 0.3 ) !important;
 		color: #fff;
     }
     .navbar-nav > li > ul > li > a:hover {
@@ -135,13 +140,8 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Recipe Search</a></li>
-                    <li><a href="share.html">Recipe Share</a></li>
-                </ul>
-            </li>
+            <li><a href="search.html" class="longnavbar">Recipe Search</a></li>
+            <li><a href="share.html" class="longnavbar">Recipe Share</a></li>
             <li><a href="community.html">Community</a></li>
             <li><a href="question.html">Question</a></li>
             <li class="dropdown">
@@ -173,7 +173,7 @@
           <form role="form">
             <div class="form-group">
               <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              <input type="text" class="form-control" id="usrname" placeholder="Enter username">
             </div>
             <div class="form-group">
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
