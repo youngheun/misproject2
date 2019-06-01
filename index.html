@@ -48,6 +48,10 @@
     .navbar .navbar-nav > .open > a:focus {
         background-color: rgba( 255, 255, 255, 0.3 ) !important;
 		color: #fff;
+		-webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
     .navbar-nav > li > ul > li > a:hover {
         color: #f9a602 !important;
@@ -87,6 +91,10 @@
     .btn:hover {
         color: #836947;
         background-color: #fff;
+   		-webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
     .btn-xl {
         font-size: 20px;
@@ -101,8 +109,8 @@
     footer {
         background-color: #424242;
         color: #fff;
-        padding-top: 50px;
-        padding-bottom: 40px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
     .modal-header, h4, .close {
         background-color: #5d5954;
@@ -142,7 +150,6 @@
         <ul class="nav navbar-nav">
             <li><a href="search.html" class="longnavbar">Recipe Search</a></li>
             <li><a href="share.html" class="longnavbar">Recipe Share</a></li>
-            <li><a href="community.html">Community</a></li>
             <li><a href="question.html">Question</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
@@ -255,9 +262,9 @@
     <div class="col-md-4 col-md-offset-4">
     <ul class="list-group">
         <li class="list-group-item"><div class="profilepic"><img src="profile1.png" class="img-responsive" style="float: left; width:25px"></div>
-Hamji_Ham <span class="badge">16</span></li>
+Hamji_Ham<span class="badge">16</span></li>
         <li class="list-group-item"><div class="profilepic"><img src="profile2.png" class="img-responsive" style="float: left; width:25px"></div>Foodie Kim <span class="badge">7</span></li> 
-        <li class="list-group-item"><div class="profilepic"><img src="profile3.png" class="img-responsive" style="float: left; width:25px"></div>mis_0619 <span class="badge">6</span></li> 
+        <li class="list-group-item"><div class="profilepic"><img src="profile3.png" class="img-responsive" style="float: left; width:25px"></div>mis_0614 <span class="badge">6</span></li> 
     </ul>
     </div>
     </div><br>
@@ -265,45 +272,48 @@ Hamji_Ham <span class="badge">16</span></li>
     </div>
 <!-- 추천 레시피 섹션 -->
 <div class="container-fluid content text-center">
-<h1 class="opsans">Today's Most Popular</h1><br><br>
+<h1 class="opsans">Today's Most Popular</h1><br><br><br>
 	<div class="row">
     	<div class="col-sm-4">
-      		<p><img src="1.jpg" class="img-thumbnail" width="50%"></p>
-      		<p>Kimchi Cake</p>
-      		<p>Hungry Hungry Hungry Lorem ipsum dolor sit amet...</p>
-      		<p><span class="glyphicon glyphicon-time" style="font-size: 18px;"></span> 30 min / <span class="glyphicon glyphicon-heart-empty" style="font-size: 18px;"></span> 217 likes</p>
+      		<p><img src="thumb01.jpg" width="60%"></p>
+      		<p>Beef Steak</p>
+      		<p>If you have a date in your house, make this fancy steak....</p>
+      		<p><span class="glyphicon glyphicon-time" style="font-size: 18px;"></span> 32 min / <span class="glyphicon glyphicon-heart-empty" style="font-size: 18px;"></span> 217 likes</p>
     	</div>
     	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-heart"></span>
-      		<h4>LOVE</h4>
-      		<p>Lorem ipsum dolor sit amet..</p>
+			<p><img src="thumb02.jpg" width="60%"></p>
+      		<p>Egg benedict</p>
+      		<p>Wanna luxury bunch? Just follow my egg recipe...</p>
+      		<p><span class="glyphicon glyphicon-time" style="font-size: 18px;"></span> 48 min / <span class="glyphicon glyphicon-heart-empty" style="font-size: 18px;"></span> 217 likes</p>
     	</div>
     	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-lock"></span>
-      		<h4>JOB DONE</h4>
-      		<p>Lorem ipsum dolor sit amet..</p>
+      		<p><img src="thumb03.jpg" width="60%"></p>
+      		<p>Roast Chicken</p>
+      		<p>Crispy! Oily! Delicious! I introduce my special cook...</p>
+      		<p><span class="glyphicon glyphicon-time" style="font-size: 18px;"></span> 7 hrs / <span class="glyphicon glyphicon-heart-empty" style="font-size: 18px;"></span> 217 likes</p>
     	</div>
     	</div>
     <br><br>
   	<div class="row">
     	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-leaf"></span>
-      		<h4>GREEN</h4>
-     		<p>Lorem ipsum dolor sit amet..</p>
+      		<p><img src="thumb04.jpg" width="60%"></p>
+      		<p>Bacon Pizza</p>
+      		<p>Most basic and popular Recommend this pizza for your kids :)...</p>
+      		<p><span class="glyphicon glyphicon-time" style="font-size: 18px;"></span> 21 min / <span class="glyphicon glyphicon-heart-empty" style="font-size: 18px;"></span> 217 likes</p>
     	</div>
     	<div class="col-sm-4">
-      		<span class="glyphicon glyphicon-certificate"></span>
-     		<h4>CERTIFIED</h4>
-    		<p>Lorem ipsum dolor sit amet..</p>
+      		<p><img src="thumb05.jpg" width="60%"></p>
+      		<p>Pumpkin Soup</p>
+      		<p>When your friend get sick, how about making this soft dish?...</p>
+      		<p><span class="glyphicon glyphicon-time" style="font-size: 18px;"></span> 5 hrs / <span class="glyphicon glyphicon-heart-empty" style="font-size: 18px;"></span> 217 likes</p>
     	</div>
     	<div class="col-sm-4">
-     		<span class="glyphicon glyphicon-wrench"></span>
-    		<h4>HARD WORK</h4>
-    		<p>Lorem ipsum dolor sit amet..</p>
+     		<p><img src="thumb06.jpg" width="60%"></p>
+      		<p>Shrimp Pasta</p>
+      		<p>You can feel ocean’s jewelry Cheesy and tomaty lol...</p>
+      		<p><span class="glyphicon glyphicon-time" style="font-size: 18px;"></span> 11 hrs / <span class="glyphicon glyphicon-heart-empty" style="font-size: 18px;"></span> 217 likes</p>
     	</div>
   	</div>
-        <p>전체적으로 구조를 엎을 수도 있음 carousel 부분이 너무 커서...참조할 곳:<br>
-        https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacked=h<br><br></p>
     </div>
 
 <footer class="container-fluid text-center">
