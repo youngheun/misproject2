@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
+    <title>MyRecipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	<!--기타-->
+	* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: ;
+  padding: 0px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: ;
+}
+
+.btn.active {
+  background-color:	 #836947; <!--이게 바로 변하는 색-->>
+  color: white;
+}
+
+	<!--메뉴-->
+    header {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    body {
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+    }
+    .affix {
+        top:0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+    .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        background-image: linear-gradient(to right, #ae9576, #99866d, #5d5954);
+        font-size: 16px;
+        text-align: center;
+    }
+    .navbar a {
+        width: 100px;
+        color: #fff !important;
+    }
+    .navbar-brand {
+        width: 100px !important;
+    }
+    .navbar .navbar-nav > .open > a,
+    .navbar .navbar-nav > .open > a:hover,
+    .navbar .navbar-nav > .open > a:focus {
+        background-color: rgba( 255, 255, 255, 0.3 );
+		color: #fff;
+    }
+    .navbar-nav > li > ul > li > a:hover {
+        color: #f9a602 !important;
+        background-color: #FFF !important;
+    }
+    .navbar-nav > li > ul > li > a {
+        color: #424242 !important;
+    }
+    .navbar-toggle, .icon-bar {
+		border:1px solid #fff;
+	}
+	button.navbar-toggle{
+		border-color: #fff !important;
+	}
+    .navbar-toggle {
+        background-color: #ff6b21 !important;
+    }
+    .content {
+    	text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .col-sm-4 {
+    	padding: 5px;
+    }
+    .carousel {
+        max-width: 800px;
+    }
+    .carousel-inner > .item {
+        max-width: 800px;
+    }
+    .bg-gray {
+        background-color: #EEE;
+    }
+    .btn {
+        color: #fff;
+        background-color: #5d5954 ;
+        border: solid 2px;
+        padding: 9px 19px 9px 19px;
+        text-decoration: none;
+        border-radius: 0px !important;
+        font-weight: bold;
+    }
+    .btn:hover {
+        color: ;
+        background-color: #fff;
+    }
+    .btn-xl {
+        font-size: 20px;
+        padding: 12px 40px 12px 40px;
+    }
+    .adcopy {
+        font-family: 'Open Sans', sans-serif;
+    }
+	.input-lg {
+		border-radius: 0px !important;
+	}
+    footer {
+        background-color: #424242;
+        color: #fff;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+	
+	<!--bar-->
+
+    </style>
+</head>
+
+<body>
+<!-- 타이틀 영역 -->
+<header>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+    <a href="index.html"><img src="logo.png" class="img-responsive center-block" style="max-width: 400px;"></a>
+    </div>
+    </div>
+    </div>
+</header>
+    <!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Recipe Search</a></li>
+                    <li><a href="share.html">Recipe Share</a></li>
+                </ul>
+            </li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="question.html">Question</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html#history">History</a></li>
+                    <li><a href="about.html#structure">Structure</a></li>
+                    <li><a href="about.html#partners">Partners</a></li>
+                    <li><a href="about.html#contact">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+<!-- 메뉴 끝, 내용 영역 시작 -->
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>Buy Now!</h1>
+<hr>
+
+<h2>Shrimp</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Organic</button>
+  <button class="btn" onclick="filterSelection('cars')"> Seasonal</button>
+  <button class="btn" onclick="filterSelection('people')"> Discount</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="shrimp1.png" alt="Mountains" style="width:100%">
+      <h4>Seapak Shrimp</h4>
+      <p>5.6$</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="shrimp1.jpg" alt="Lights" style="width:100%">
+      <h4>Global Healthy Shrimp</h4>
+      <p>8$</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="shrimp2.jpg" alt="Nature" style="width:100%">
+      <br><h4>Kedo Shrimp</h4>
+      <p>4$</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="shrimp3.jpg" alt="Car" style="width:100%">
+      <h4>Atkins Shrimp</h4>
+      <p>4.99$</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="shrimp4.jpg" alt="Car" style="width:100%">
+      <h4>Great Value Shrimp</h4>
+      <p>7.99$</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="shrimp5.jpg" alt="Car" style="width:100%">
+      <h4>Aqua Gold Shrimp</h4>
+      <p>6$</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="shrimp6.jpg" alt="Car" style="width:100%">
+      <h4>Asmak Shrimp</h4>
+      <p>5.5$</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="shrimp7.png" alt="Car" style="width:100%">
+      <h4>Kirkland Shrimp</h4>
+      <p>4.5$</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="shrimp8.png" alt="Car" style="width:100%">
+      <h4>Sinsegae Shrimp</h4>
+      <p>2$</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<br><br>
+
+
+</body>
+</html>
