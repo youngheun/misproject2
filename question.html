@@ -5,10 +5,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>MyRecipe</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
+    <title>YumCipe</title>
     <style>
+    header {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
     body {
         position: relative;
+        font-family: 'Roboto', sans-serif;
     }
     .affix {
         top:0;
@@ -16,52 +22,129 @@
         z-index: 9999 !important;
     }
     .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
         border: 0;
         border-radius: 0;
         margin-bottom: 0;
-        background-color: #fada5e;
-        font-size: 14px;
+        background-image: linear-gradient(to right, #ae9576, #99866d, #5d5954);
+        font-size: 16px;
+        text-align: center !important;
     }
-    .navbar-nav li a:hover, .navbar-nav li.active a {
-        color: #f9a602 !important;
-        background-color: #fff !important;
+    .navbar a {
+        width: 110px;
+        color: #fff !important;
     }
+    .longnavbar {
+        width: 140px !important;
+    }
+    .navbar-brand {
+        width: 100px !important;
+        background-color: transparent !important;
+    }
+    .navbar .navbar-nav a:hover,
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: #fff !important;
+        background-color: rgba( 255, 255, 255, 0.3 ) !important;
+        color: #fff;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
-    .flex-container {
-        display: flex;
-        flex-direction: row-reverse;
+    .navbar-nav > li > ul > li > a:hover {
+        color: #f9a602 !important;
+        background-color: #FFF !important;
     }
-    .flex-container > div {
-        background-color: #f1f1f1;
-        padding: 3px;
-        margin: 10px;
-        text-align: center;
+    .navbar-nav > li > ul > li > a {
+        color: #424242 !important;
+    }
+    .navbar-toggle, .icon-bar {
+        border:1px solid #fff;
+    }
+    button.navbar-toggle{
+        border-color: #fff !important;
     }
     .navbar-toggle {
-        background-color: #fada5e !important;
+        background-color: #ff6b21 !important;
     }
     .content {
-    	text-align: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .col-sm-4 {
+        padding: 5px;
+    }
+    .bg-gray {
+        background-color: #EEE;
+    }
+    .btn {
+        color: #fff;
+        background-color: #836947;
+        border: #836947 solid 2px;
+        padding: 9px 19px 9px 19px;
+        text-decoration: none;
+        border-radius: 0px !important;
+        font-weight: bold;
+    }
+    .btn:hover {
+        color: #836947;
+        background-color: #fff;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    .btn-xl {
+        font-size: 20px;
+        padding: 12px 40px 12px 40px;
+    }
+    .opsans {
+        font-family: 'Open Sans', sans-serif;
+    }
+    .input-lg {
+        border-radius: 0px !important;
+    }
+    footer {
+        background-color: #424242;
+        color: #fff;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .modal-header, h4, .close {
+        background-color: #5d5954;
+        color:white !important;
+        text-align: center;
+        font-size: 30px;
+    }
+    .modal-footer {
+        background-color: #eee;
+    }
+    .panel-title {
+        text-align: left;
+        background-color: transparent !important;
+        color: #fff !important;
+    }
+    .panel-heading {
+        background-color: #70685c !important;
     }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid text-center">
-    <a href="index.html"><h1>MyRecipe</h1></a>
+<!-- 타이틀 영역 -->
+<header>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+    <a href="index.html"><img src="logo.png" width="500" style="display:block; width:100%; max-width:500px text-center"></a>
     </div>
-    <!-- 개인 메뉴 영역 -->
-    <div class="flex-container">
-        <div>My Page</div>
-        <div>Sign Up</div>
-        <div>Sign In</div>
     </div>
-    <!-- 전체 메뉴 영역 -->
-    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100">
+    </div>
+</header>
+<!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="210">
         <div class="container-fluid">
         <div class="navbar-header">
         <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -69,19 +152,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">MyRecipe(logo)</a>
+        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Recipe Search</a></li>
-                    <li><a href="#">Recipe Share</a></li>
-                </ul>
-            </li>
-            <li><a href="community.html">Community</a></li>
-            <li class="active"><a href="question.html">Question</a></li>
+            <li><a href="search.html" class="longnavbar">Recipe Search</a></li>
+            <li><a href="share.html" class="longnavbar">Recipe Share</a></li>
+            <li><a href="question.html">Question</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
                 <ul class="dropdown-menu">
@@ -92,28 +169,115 @@
                 </ul>
             </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li id="loginclick"><a>Sign In</a></li>
+        <li><a href="#">Sign Up</a></li>
+        </ul>
         </div>
         </div>
     </nav>
-    <!-- 메뉴 끝, 내용 영역 시작 -->
+<!-- Modal -->
+<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px; text-align: center;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox" align="right">
+              <label><input type="checkbox">Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p>Not a member? <a href="#">Sign Up</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+<!-- 메뉴 끝, 내용 영역 시작 -->
 <div class="container-fluid content">
-    <h1>Question</h1>
-	<h4>질문을 해보세요</h4>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br>
-    <h2>some text to make scroll</h2><br></p>
+<h1 class="opsans">Frequently Asked Questions</h1>
+<br><br>
+
+ <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Q. How can I pay for ingredients?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">A. You can use your money directly(e.g. credit card, bank transfer) or use points of YUMCIPE.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Q. How can I get points?</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">A. When you share your recipes or get a LIKE from many users in YUMCIPE, we’ll give you points.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Q. Ingredients that I bought in YUMCIPE have gone bad. I want to get a refund.</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">A. We are a mediation platform so we just follow refund policies of individual foodstuff companies. If you meet problem in ingredients quality, we will pass on your complain to food suppliers and solve that problem ASAP.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Q. We are a foodstuff company, and we want to place our products for YUMCIPE users.</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">A. Thanks for your suggestion about a partnership. Please <a href="about.html#contact">contact us</a> or call to +1)206-123-4567 and then YUMCIPE can make a business meeting for making the partnership.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Q. How can I be selected as a best recipe provider?</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">A. The most important criterion for being chosen as a best recipe provider is the number of LIKE. The recipe consumer can click only one LIKE per account, and the recipe with the most LIKE in a week will be placed in the Hall of Fame. Furthermore, additional points benefits are offered to recipe providers listed in Hall of Fame.</div>
+      </div>
+    </div>
+
+  </div> 
+
+
+
 </div>
 <footer class="container-fluid text-center">
-  <p>copyright ⓒ MyRecipe 2019</p> 
+  <p>copyright ⓒ YumCipe 2019</p> 
 </footer>
-
+<script>
+$(document).ready(function(){
+  $("#loginclick").click(function(){
+    $("#loginmodal").modal();
+  });
+});
+</script>
 </body>
 </html>
