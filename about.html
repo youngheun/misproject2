@@ -27,21 +27,31 @@
         border: 0;
         border-radius: 0;
         margin-bottom: 0;
-        background-image: linear-gradient(to right, #ffca28, #ffa040, #ff7073, #ff4db1, #ff59f1);
+        background-image: linear-gradient(to right, #ae9576, #99866d, #5d5954);
         font-size: 16px;
-        text-align: center;
+        text-align: center !important;
     }
     .navbar a {
-        width: 100px;
+        width: 110px;
         color: #fff !important;
+    }
+    .longnavbar {
+    	width: 140px !important;
     }
     .navbar-brand {
         width: 100px !important;
+        background-color: transparent !important;
     }
+    .navbar .navbar-nav a:hover,
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: #FFCA28;
+        background-color: rgba( 255, 255, 255, 0.3 ) !important;
+		color: #fff;
+		-webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
     .navbar-nav > li > ul > li > a:hover {
         color: #f9a602 !important;
@@ -56,23 +66,12 @@
 	button.navbar-toggle{
 		border-color: #fff !important;
 	}
-    .flex-container {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    .flex-container > div {
-        padding: 3px;
-        margin: 10px;
-        text-align: center;
-        color: #424242;
-    }
     .navbar-toggle {
-        background-color: #ff59f1 !important;
+        background-color: #ff6b21 !important;
     }
     .content {
-    	text-align: center;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     .col-sm-4 {
     	padding: 5px;
@@ -82,22 +81,26 @@
     }
     .btn {
         color: #fff;
-        background-color: #f8585b;
-        border: #f8585b solid 2px;
+        background-color: #836947;
+        border: #836947 solid 2px;
         padding: 9px 19px 9px 19px;
         text-decoration: none;
         border-radius: 0px !important;
         font-weight: bold;
     }
     .btn:hover {
-        color: #f8585b;
+        color: #836947;
         background-color: #fff;
+   		-webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
     .btn-xl {
         font-size: 20px;
         padding: 12px 40px 12px 40px;
     }
-    .adcopy {
+    .opsans {
         font-family: 'Open Sans', sans-serif;
     }
 	.input-lg {
@@ -106,8 +109,17 @@
     footer {
         background-color: #424242;
         color: #fff;
-        padding-top: 50px;
-        padding-bottom: 40px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .modal-header, h4, .close {
+        background-color: #5d5954;
+        color:white !important;
+        text-align: center;
+        font-size: 30px;
+    }
+    .modal-footer {
+        background-color: #eee;
     }
     #history {padding-top:50px;padding-bottom:10px;}
     #structure {padding-top:50px;padding-bottom:10px;}
@@ -127,14 +139,8 @@
     </div>
     </div>
 </header>
-    <!-- 개인 메뉴 영역 -->
-    <div class="flex-container">
-        <div>My Page</div>
-        <div>Sign Up</div>
-        <div>Sign In</div>
-    </div>
-    <!-- 전체 메뉴 영역 -->
-    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="100">
+<!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="210">
         <div class="container-fluid">
         <div class="navbar-header">
         <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -142,20 +148,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">MyRecipe(logo)</a>
+        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Recipe Search</a></li>
-                    <li><a href="#">Recipe Share</a></li>
-                </ul>
-            </li>
-            <li><a href="community.html">Community</a></li>
+            <li><a href="search.html" class="longnavbar">Recipe Search</a></li>
+            <li><a href="share.html" class="longnavbar">Recipe Share</a></li>
             <li><a href="question.html">Question</a></li>
-            <li class="dropdown active">
+            <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
                 <ul class="dropdown-menu">
                     <li><a href="about.html#history">History</a></li>
@@ -165,13 +165,51 @@
                 </ul>
             </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li id="loginclick"><a>Sign In</a></li>
+        <li><a href="#">Sign Up</a></li>
+        </ul>
         </div>
         </div>
     </nav>
+<!-- Modal -->
+<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px; text-align: center;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox" align="right">
+              <label><input type="checkbox">Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p>Not a member? <a href="#">Sign Up</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+
+<!-- 메뉴 끝, 내용 영역 시작 -->
     <!-- 메뉴 끝, 내용 영역 시작 -->
     <!-- 역사 -->
     <div id="history" class="container-fluid">
-        <h1>History</h1>
+        <h1 class="opsans">History</h1>
         <p>역사가 들어갑니다.</p>
         <p>내비게이션 바의 메뉴를 누르면 해당 위치로 이동합니다.</p>
         <p>스크롤 실험을 위한 텍스트</p>
@@ -186,8 +224,8 @@
         <p>스크롤 실험을 위한 텍스트</p>
         <p>스크롤 실험을 위한 텍스트</p>
     </div>
-    <div id="structure" class="container-fluid">
-        <h1>Structure</h1>
+    <div id="structure" class="container-fluid bg-gray">
+        <h1 class="opsans">Structure</h1>
         <p>조직구조가 들어갑니다.</p>
         <p>내비게이션 바의 메뉴를 누르면 해당 위치로 이동합니다.</p>
         <p>스크롤 실험을 위한 텍스트</p>
@@ -203,7 +241,7 @@
         <p>스크롤 실험을 위한 텍스트</p>
     </div>
     <div id="partners" class="container-fluid">
-        <h1>Partners</h1>
+        <h1 class="opsans">Partners</h1>
         <p>파트너 기업이 들어갑니다.</p>
         <p>내비게이션 바의 메뉴를 누르면 해당 위치로 이동합니다.</p>
         <p>스크롤 실험을 위한 텍스트</p>
@@ -218,8 +256,8 @@
         <p>스크롤 실험을 위한 텍스트</p>
         <p>스크롤 실험을 위한 텍스트</p>
     </div>
-    <div id="contact" class="container-fluid">
-        <h1>Contact Us</h1>
+    <div id="contact" class="container-fluid bg-gray">
+        <h1 class="opsans">Contact Us</h1>
 <div class="container">
 <div class="row">
     <div class="col-md-4">
@@ -252,8 +290,14 @@
 
     </div>
 <footer class="container-fluid text-center">
-  <p>copyright ⓒ MyRecipe 2019</p> 
+  <p>copyright ⓒ YumCipe 2019</p> 
 </footer>
-
+<script>
+$(document).ready(function(){
+  $("#loginclick").click(function(){
+    $("#loginmodal").modal();
+  });
+});
+</script>
 </body>
 </html>
