@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
+    <title>MyRecipe</title>
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--나와-->
+	   <style>
+<!--뒤집혀라-->
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #5d5954 ;
+  color: white;
+  transform: rotateY(180deg);
+}
+	   
+	   <!--column-->
+	   * {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+<!--꺼저 ㅏㅇ아아-->
+.container {
+  position: relative;
+  width: 40%;
+}
+
+.image {
+  display: block;
+  width: 40.7%;
+  height: 42.5%;	
+}
+
+.overlay {
+  position: absolute;
+  top: 17%;
+  bottom: 80%;
+  left: 10px;
+  right: 18px;
+  height: 14.6%;
+  width: 28%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #5d5954 ;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+	  <!--buy now button-->
+	   .btn {
+  border: none;
+  background-color: inherit;
+  padding: 9px 9px;
+  font-size: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+/* Orange */
+.warning {
+  color: #5d5954 ;
+}
+
+.warning:hover {	
+  background: #5d5954 ;
+  color: white;
+}
+
+/* Gray */
+.default {
+  color: black;
+}
+
+.default:hover {
+  background: gray;
+}
+
+	   #more {display: none;}
+
+	   .mySlides {display:none;}
+
+.checked {
+  color: orange;
+}
+   <!--메뉴-->
+   header {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    body {
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+    }
+    .affix {
+        top:0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+    .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        background-image: linear-gradient(to right, #ae9576, #99866d, #5d5954);
+        font-size: 16px;
+        text-align: center;
+    }
+    .navbar a {
+        width: 100px;
+        color: #fff !important;
+    }
+    .navbar-brand {
+        width: 100px !important;
+    }
+    .navbar .navbar-nav > .open > a,
+    .navbar .navbar-nav > .open > a:hover,
+    .navbar .navbar-nav > .open > a:focus {
+        background-color: rgba( 255, 255, 255, 0.3 );
+    color: #fff;
+    }
+    .navbar-nav > li > ul > li > a:hover {
+        color: #99866d !important;
+        background-color: #FFF !important;
+    }
+    .navbar-nav > li > ul > li > a {
+        color: #424242 !important;
+    }
+    .navbar-toggle, .icon-bar {
+    border:1px solid #fff;
+  }
+  button.navbar-toggle{
+    border-color: #fff !important;
+  }
+    .navbar-toggle {
+        background-color: #5d5954 !important;
+    }
+    .content {
+    	text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .col-sm-4 {
+    	padding: 5px;
+    }
+    .carousel {
+        max-width: 800px;
+    }
+    .carousel-inner > .item {
+        max-width: 800px;
+    }
+    .bg-gray {
+        background-color: #EEE;
+    }
+    .btn {
+        color: #fff;
+        background-color: #5d5954 ;
+        border: solid 2px;
+        padding: 9px 19px 9px 19px;
+        text-decoration: none;
+        border-radius: 0px !important;
+        font-weight: bold;
+    }
+    .btn:hover {
+        color: #5d5954 ;
+        background-color: #fff;
+    }
+    .btn-xl {
+        font-size: 20px;
+        padding: 12px 40px 12px 40px;
+    }
+    .adcopy {
+        font-family: 'Open Sans', sans-serif;
+    }
+	.input-lg {
+		border-radius: 0px !important;
+	}
+    footer {
+        background-color: #424242;
+        color: #fff;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+<!--레시피-->
+	* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: 
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+<!--단나누기-->
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+<!--버튼-->
+.btn {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn2 {background-color: #4CAF50;} /* Green */
+.btn2:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+    </style>
+</head>
+
+<body>
+<!-- 타이틀 영역 -->
+<header>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+    <a href="index.html"><img src="logo.png" width="500" style="display:block; width:100%; max-width:500px text-center"></a>
+    </div>
+    </div>
+    </div>
+</header>
+    <!-- 전체 메뉴 영역 -->
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="210">
+        <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Recipe Search</a></li>
+                    <li><a href="share.html">Recipe Share</a></li>
+                </ul>
+            </li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="question.html">Question</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html#history">History</a></li>
+                    <li><a href="about.html#structure">Structure</a></li>
+                    <li><a href="about.html#partners">Partners</a></li>
+                    <li><a href="about.html#contact">Contact Us</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Sign Up</a></li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+<!--내용-->
+
+
+
+<div class="row">
+  <div class="column" style="background-color:;"> 
+<br><div class="container">
+  <img src="tp.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Category: Pasta<br>Origin: Zambia<br>
+Time: 30min</div>
+  </div>
+</div>
+
+  </div>
+
+<div class="column" style="background-color:;">
+	
+	<h2>Cream Pasta</h2>
+	<p>Cream spaghetti, mixed with plain cream sauce,  
+	<span id="dots">...</span>
+	<span id="more">is one of the most affordable Italian dishes with a combination 
+	of complaint and softness. You can have a nice customer with wine.</span></p>
+	<button onclick="myFunction()" id="myBtn" class= "btn default" >Read more</button>
+	<script>
+	function myFunction() {
+	var dots = document.getElementById("dots");
+	var moreText = document.getElementById("more");
+	var btnText = document.getElementById("myBtn");
+
+	if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+	} else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+	}
+	}	
+	</script>
+
+
+
+	<tr>
+    <h2>Ingredient:</h2> 
+	</tr>
+	<tr>
+    <td style = "font-size: 3123pt;">
+	<input type = "checkbox" Name="F" Value = "a" Checked> Mushroom
+	<input type = "checkbox" Name="F" Value = "o" Checked> Shrimp
+	<input type = "checkbox" Name="F" Value = "p" Checked> Cream <br>
+	<input type = "checkbox" Name="F" Value = "a" Checked> Garlic Powder
+	<input type = "checkbox" Name="F" Value = "p" Checked> Onion Powder
+	</tr>
+	</table>
+	<br>
+	<br>
+	<button class="btn warning">Buy now!</button>
+	
+	
+</div>
+  
+  <div class="column" style="background-color:;">
+	<table style="width:100%">
+	<tr>
+	<br>
+    <th style = "font-size:15pt;">ID: HAM_G 
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star"></span>
+	</th>
+	</tr>
+	<tr>
+	<td style = "font-size : 8pt;"></td>
+	<tr>
+    <td style = "font-size: 10pt;">My son Really loved it!!</td>
+	</tr>
+	<tr>
+	<th Style = "font-size:15pt;">ID: Huegang  <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+</th>
+	</tr>
+	<tr>
+	<td syle = "font-size: 10pt;">It's delicious but little spicy for me,,
+	</table>
+	<br>
+	<textarea rows="5" cols="30" name="contents">share your comments</textarea>
+	<form action="a.html">
+	<br>
+	 
+  	<input type="button" class="btn default" name="btn2" value="Save" onclick="alert('Saved your comment :) Thank you!')">
+</div>
+
+
+  </div>
+	<br>
+	<br>
+<table style>	
+	<br>
+	<br>
+<div class = "multicolumns_hamham">
+	<br>
+
+	
+<!--레시피-->
+	<!-- MAIN (Center website) -->
+<div class="main">
+<div style= "text-align:center">
+<h1>Recipe</h1>
+<p>how to make your delicious Cream Pasta?</p>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="recipe1.jpg" alt="Mountains" style="width:100%">
+      <h3>Step 1</h3>
+      <p> Boil noodles</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="recipe2.jpg" alt="Lights" style="width:100%">
+      <h3>Step 2</h3>
+      <p>Put red pepper, mushroom, shrimp 
+	  <br>and stir it for 5 min</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="recipe3.jpg" alt="Nature" style="width:100%">
+      <h3>Step 3</h3>
+      <p>Pour cream and stir them for 7 min</p>
+    </div>
+  </div>
+  <br>
+  <div class="column">
+    <br>
+	<br>
+	<br>
+	<br>
+	<div class="content">
+    <img src="recipe4.jpg" alt="Mountains" style="width:100%">
+      <h3>Step 4</h3>
+      <p>Put salt on noodles</p>
+    </div>
+  </div>
+  <div class="column">
+    <br>
+	<br>
+	<br>
+	<br>
+	<div class="content">
+    <img src="recipe5.jpg" alt="Nature" style="width:100%">
+      <h3>Step 5</h3>
+      <p>Put noodles in cream sauce</p>
+    </div>
+  </div>
+  <div class="column">
+    <br>
+	<br>
+	<br>
+	<br>
+	<div class="content">
+    <img src="tp.jpg" alt="Nature" style="width:100%">
+      <h3>Step 6</h3>
+      <p>Complete!</p>
+    </div>
+  </div>
+
+<!-- END GRID -->
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2>Food which would be PERFECT with Cream Pasta</h2>
+
+<div class="row">
+  <div class="column" style="background-color:;">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="pizza1.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <br><br><br><h1>Pepperoni <br> Pizza</h1> 
+      <p>Category: Pizza</p>
+      <p>Time: 50 min</p> 
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="column" style="background-color:;">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="orange.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <br><br><br><h1>Grapefruit <br> Aid</h1> 
+      <p>Category: Aid</p> 
+      <p>Time: 20 min</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="column" style="background-color:;">
+ 
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="salad.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <br><br><br><h1>Avocado <br>Salad</h1> 
+      <p>Category: Salad</p> 
+      <p>Time: 10 min</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+<br><br><br>
+<!-- END MAIN -->
+</div>
+<br>
+<br>
+
+
+</body>
+</html>
