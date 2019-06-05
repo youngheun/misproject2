@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
-    <title>MyRecipe</title>
+    <title>YumCipe</title>
 <!-- Font Awesome Icon Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--나와-->
@@ -370,7 +370,7 @@ h1 {
     </div>
     </div>
 </header>
-    <!-- 전체 메뉴 영역 -->
+<!-- 전체 메뉴 영역 -->
     <nav class="navbar navbar-default" data-spy="affix" data-offset-top="210">
         <div class="container-fluid">
         <div class="navbar-header">
@@ -383,17 +383,12 @@ h1 {
         </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Recipe Search</a></li>
-                    <li><a href="share.html">Recipe Share</a></li>
-                </ul>
-            </li>
-            <li><a href="community.html">Community</a></li>
+            <li><a href="search.html" class="longnavbar">Recipe Search</a></li>
+            <li><a href="share.html" class="longnavbar">Recipe Share</a></li>
+            <li><a href="ingredient.html">Yum Shop</a></li>
             <li><a href="question.html">Question</a></li>
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
+                <a class="dropdown-toggle" data-toggle="dropdown">About Us</a>
                 <ul class="dropdown-menu">
                     <li><a href="about.html#history">History</a></li>
                     <li><a href="about.html#structure">Structure</a></li>
@@ -403,8 +398,8 @@ h1 {
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign In</a></li>
-        <li><a href="#">Sign Up</a></li>
+        <li id="loginclick"><a>Sign In</a></li>
+        <li id="signupclick"><a>Sign Up</a></li>
         </ul>
         </div>
         </div>
@@ -467,7 +462,7 @@ Time: 30min</div>
 	</table>
 	<br>
 	<br>
-	<button class="btn warning">Buy now!</button>
+	<a href="buy.html"><button class="btn warning">Buy now!</button></a>
 	
 	
 </div>
