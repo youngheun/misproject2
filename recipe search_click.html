@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,9 +7,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Roboto" rel="stylesheet">
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <title>YumCipe</title>
     <style>
-    header {
+header {
         margin-top: 10px;
         margin-bottom: 20px;
     }
@@ -123,7 +123,84 @@
     .modal-footer {
         background-color: #eee;
     }
-    </style>
+
+
+
+.container {
+	color: #5d5954;
+}
+
+.caption {
+  font-size: 20px;
+}
+
+.btn {
+	background-color: #CFA636;
+}
+
+
+.btnn {
+	background-color: #CFA636;
+}
+
+ 
+ .pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #836947;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.thumbnail {
+  text-align: center;
+}
+
+.button {
+  background-color: #79ABFF; /파랑/
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+	
+	
+</style>
+  
+  
 </head>
 
 <body>
@@ -205,151 +282,140 @@
 </div>
 
 <!-- 메뉴 끝, 내용 영역 시작 -->
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.columns {
-  float: left;
-  width: 25%;
-  padding: 8px;
-}
-
-.price {
-  list-style-type: none;
-  border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
-
-.price .header {
-  background-color: #111;
-  color: white;
-  font-size: 25px;
-}
-
-.price li {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-  text-align: center;
-}
-
-.price .grey {
-  background-color: #eee;
-  font-size: 20px;
-}
-
-.button {
-  background-color: #C4B68F;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-@media only screen and (max-width: 600px) {
-  .columns {
-    width: 100%;
-  }
-}
-
-</style>
-
-
-</head>
-  
-  
-  
-<div class="container" style="margin-top:50px">
-  
-<style>
-.container {
-	color: #5d5954;
-}
-
-.btn {
-	background-color: #603A00;
-}
-
-</style>
-
-
-</head>
-
-<body>
-
-
-
 <div class="alert alert-warning">
-  <strong>Recipe Search</strong>  Select What You Want!
+  <strong>Recipe Search</strong>  We find 72 Recipes for selected condition!
 </div>
 
 
+ <div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="/w3images/lights.jpg">
+        <img src="시금치파스타2.jpg" alt="시금치파스타" style="width:80%">
+        <div class="caption">
+          <p>Healthy power, Spinach pasta </p>
+			<div class="row">
 
-<div class="columns">
-  <ul class="price">
-    <li class="header" style="background-color:#836947">Country</li>
-    <li><a href="#">Korean</li>
-    <li><a href="#">Chinese</li>
-    <li><a href="#">Japanese</li>
-	<li><a href="#">Southeast Asia</li>
-	<li><a href="#">Mexican</li>
-	<li><a href="recipe search_click.html">Western</li>
-	<li><a href="#">Fusion</li>
-	<li><a href="#">Exotic</li>
-  </ul>
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+</script>
+
+        <a href="#" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-heart"></span> 189 
+        </a>
+
+			<button type="button" class="btn btn-primary" style='size:60px'><i class='far fa-clock' style='font-size:24px'></i>   20  minutes </button>
+			</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="/w3images/nature.jpg">
+        <img src="오믈렛투.jpg" alt="오믈렛" style="width:80%">
+        <div class="caption">
+          <p>Soft, sweet moring with Omelette</p>
+		  			<div class="row">
+					
+					
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+</script>
+        <a href="#" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-heart"></span> 203 
+        </a>
+
+			<button type="button" class="btn btn-primary" style='size:60px'><i class='far fa-clock' style='font-size:24px'></i>   15  minutes </button>
+			</div>
+        </div>
+      </a>
+    </div>
+  </div>
+ </div>
+ 
+ <div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="/w3images/lights.jpg">
+        <img src="시카고피자투.jpg" alt="Pizza" style="width:67%">
+        <div class="caption">
+          <p>Cheese Bomb! pizza</p>
+		  			<div class="row">
+					
+					
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+</script>
+       <a href="#" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-heart"></span> 308 
+        </a>
+
+			<button type="button" class="btn btn-primary" style='size:60px'><i class='far fa-clock' style='font-size:24px'></i>   30  minutes </button>
+			</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <a href="/w3images/nature.jpg">
+        <img src="tp.jpg" alt="크림파스타" style="width:70%">
+        <div class="caption">
+          <p>Am I in Italy? Real Cream pasta!</p>
+		  			<div class="row">
+					
+					
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+</script>
+
+       <a href="#" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-heart"></span> 432 
+        </a>
+
+			<button type="button" class="btn btn-primary" style='size:60px'><i class='far fa-clock' style='font-size:24px'></i>   15  minutes </button>
+			</div>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
 
-<div class="columns">
-  <ul class="price">
-    <li class="header" style="background-color:#836947">Situation</li>
-    <li><a href="#">Snack</li>
-    <li><a href="#">Food for Alchol</li>
-    <li><a href="#">Hangover</li>
-	<li><a href="#">Guest Reception</li>
-	<li><a href="#">Party Food</li>
-	<li><a href="#">Traditional Food</li>
-	<li><a href="#">5 minutes Food</li>
-	<li><a href="#">Daily</li>
-  </ul>
+
+<div class="center">
+  <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a class="active" href="#">1</a>
+    <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">7</a>
+  <a href="#">8</a>
+  <a href="#">9</a>
+  <a href="#">10</a>
+  <a href="#">&raquo;</a>
 </div>
 
-<div class="columns">
-  <ul class="price">
-    <li class="header" style="background-color:#836947">Ingredient</li>
-    <li><a href="#">Vegetable</li>
-    <li><a href="#">Meat</li>
-    <li><a href="#">Seafood</li>
-	<li><a href="#">Fruit</li>
-	<li><a href="#">Egg/Milk</li>
-	<li><a href="#">Noodle</li>
-	<li><a href="#">Seasonal</li>
-	<li><a href="#">Processed Food</li>
-  </ul>
-</div>
 
-<div class="columns">
-  <ul class="price">
-    <li class="header" style="background-color:#836947">Method</li>
-    <li><a href="#">Sitr-fried</li>
-    <li><a href="#">Fried</li>
-    <li><a href="#">Baking</li>
-	<li><a href="#">Steamed</li>
-	<li><a href="#">Soup</li>
-	<li><a href="#">Seasoned</li>
-  </ul>
-</div>
-
-</div>
 <footer class="container-fluid text-center">
   <p>copyright ⓒ YumCipe 2019</p> 
 </footer>
