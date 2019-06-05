@@ -78,22 +78,22 @@ body {
 <!--꺼저 ㅏㅇ아아-->
 .container {
   position: relative;
-  width: 30%;
+  width: 40%;
 }
 
 .image {
   display: block;
-  width: 30%;
-  height: 30%;
+  width: 40.7%;
+  height: 42.5%;	
 }
 
 .overlay {
   position: absolute;
-  top: 16%;
+  top: 17%;
   bottom: 80%;
   left: 10px;
   right: 18px;
-  height: 14%;
+  height: 14.6%;
   width: 28%;
   opacity: 0;
   transition: .5s ease;
@@ -383,8 +383,14 @@ h1 {
         </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav">
-            <li><a href="search.html" class="longnavbar">Recipe Search</a></li>
-            <li><a href="share.html" class="longnavbar">Recipe Share</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Recipe</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Recipe Search</a></li>
+                    <li><a href="share.html">Recipe Share</a></li>
+                </ul>
+            </li>
+            <li><a href="community.html">Community</a></li>
             <li><a href="question.html">Question</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="about.html">About Us</a>
@@ -397,7 +403,7 @@ h1 {
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-        <li id="loginclick"><a>Sign In</a></li>
+        <li><a href="#">Sign In</a></li>
         <li><a href="#">Sign Up</a></li>
         </ul>
         </div>
@@ -409,7 +415,7 @@ h1 {
 
 <div class="row">
   <div class="column" style="background-color:;"> 
-<br><br><br><div class="container">
+<br><div class="container">
   <img src="tp.jpg" alt="Avatar" class="image">
   <div class="overlay">
     <div class="text">Category: Pasta<br>Origin: Zambia<br>
@@ -419,30 +425,31 @@ Time: 30min</div>
 
   </div>
 
-  <div class="column" style="background-color:;">
-<h2>Cream Pasta</h2>
-<p>Cream spaghetti, mixed with plain cream sauce,  
-<span id="dots">...</span>
-<br>
-<span id="more">is one of the most affordable Italian dishes with a combination of complaint and softness. You can have a nice customer with wine.</span></p>
-<button onclick="myFunction()" id="myBtn" class= "btn default" >Read more</button>
-<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+<div class="column" style="background-color:;">
+	
+	<h2>Cream Pasta</h2>
+	<p>Cream spaghetti, mixed with plain cream sauce,  
+	<span id="dots">...</span>
+	<span id="more">is one of the most affordable Italian dishes with a combination 
+	of complaint and softness. You can have a nice customer with wine.</span></p>
+	<button onclick="myFunction()" id="myBtn" class= "btn default" >Read more</button>
+	<script>
+	function myFunction() {
+	var dots = document.getElementById("dots");
+	var moreText = document.getElementById("more");
+	var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
+	if (dots.style.display === "none") {
     dots.style.display = "inline";
     btnText.innerHTML = "Read more"; 
     moreText.style.display = "none";
-  } else {
+	} else {
     dots.style.display = "none";
     btnText.innerHTML = "Read less"; 
     moreText.style.display = "inline";
-  }
-}
-</script>
+	}
+	}	
+	</script>
 
 
 
@@ -460,20 +467,22 @@ function myFunction() {
 	</table>
 	<br>
 	<br>
-	<a href="buy.html"><button class="btn warning">Buy now!</button></a>
+	<button class="btn warning">Buy now!</button>
+	
+	
 </div>
   
   <div class="column" style="background-color:;">
 	<table style="width:100%">
 	<tr>
-
-	<br><br>
-    <th style = "font-size:15pt;">ID: HAM_G <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-</th>
+	<br>
+    <th style = "font-size:15pt;">ID: HAM_G 
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star"></span>
+	</th>
 	</tr>
 	<tr>
 	<td style = "font-size : 8pt;"></td>
@@ -493,8 +502,8 @@ function myFunction() {
 	</table>
 	<br>
 	<textarea rows="5" cols="30" name="contents">share your comments</textarea>
-	 <form action="a.html">
-	 <br>
+	<form action="a.html">
+	<br>
 	 
   	<input type="button" class="btn default" name="btn2" value="Save" onclick="alert('Saved your comment :) Thank you!')">
 </div>
@@ -570,7 +579,7 @@ function myFunction() {
 	<br>
 	<br>
 	<div class="content">
-    <img src="recipe6.jpg" alt="Nature" style="width:100%">
+    <img src="tp.jpg" alt="Nature" style="width:100%">
       <h3>Step 6</h3>
       <p>Complete!</p>
     </div>
