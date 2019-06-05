@@ -150,6 +150,7 @@
         <ul class="nav navbar-nav">
             <li><a href="search.html" class="longnavbar">Recipe Search</a></li>
             <li><a href="share.html" class="longnavbar">Recipe Share</a></li>
+            <li><a href="ingredient.html">Yum Shop</a></li>
             <li><a href="question.html">Question</a></li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">About Us</a>
@@ -163,12 +164,12 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
         <li id="loginclick"><a>Sign In</a></li>
-        <li><a href="#">Sign Up</a></li>
+        <li id="signupclick"><a>Sign Up</a></li>
         </ul>
         </div>
         </div>
     </nav>
-<!-- Modal -->
+<!-- login Modal -->
 <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -200,6 +201,26 @@
     </div>
   </div> 
 </div>
+
+<!-- Sign Up Modal -->
+  <div class="modal fade" id="signupmodal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><span class="glyphicon glyphicon-exclamation-sign"></span> Caution</h4>
+        </div>
+        <div class="modal-body" style="text-align: center; padding-top: 40px; padding-bottom: 40px;">
+          <p>Sorry, we currently do not accept new members.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 <!-- 메뉴 끝, 내용 영역 시작 -->
 <!-- Carousel -->
@@ -323,6 +344,9 @@ Hamji_Ham<span class="badge">16</span></li>
 $(document).ready(function(){
   $("#loginclick").click(function(){
     $("#loginmodal").modal();
+  });
+  $("#signupclick").click(function(){
+    $("#signupmodal").modal();
   });
 });
 function login() {
