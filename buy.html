@@ -237,37 +237,36 @@ h1 {
     </nav>
 <!-- 메뉴 끝, 내용 영역 시작 -->
 
-<!-- MAIN (Center website) -->
-<div class="main">
+	<!-- MAIN (Center website) -->
+	<div class="main">
 
-<h1>Buy Now!</h1>
-<hr>
+		<h1>Buy Now!</h1>
+		<hr>
 
-<h2>Shrimp</h2>
+		<h2>Shrimp</h2>
+		<div id="myBtnContainer">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			<button class="btn" onclick="filterSelection('nature')"> Organic</button>
+			<button class="btn" onclick="filterSelection('cars')"> Seasonal</button>
+			<button class="btn" onclick="filterSelection('people')"> Discount</button>
+		</div>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('nature')"> Organic</button>
-  <button class="btn" onclick="filterSelection('cars')"> Seasonal</button>
-  <button class="btn" onclick="filterSelection('people')"> Discount</button>
-</div>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column nature">
-    <div class="content">
-      <img src="shrimp1.png" alt="Mountains" style="width:100%">
-      <h4>Seapak Shrimp</h4>
-      <p>5.6$</p>
-    </div>
-  </div>
-  <div class="column nature">
-    <div class="content">
-    <img src="shrimp1.jpg" alt="Lights" style="width:100%">
-      <h4>Global Healthy Shrimp</h4>
-      <p>8$</p>
-    </div>
-  </div>
+	<!-- Portfolio Gallery Grid -->
+	<div class="row">
+		<div class="column nature">
+		<div class="content">
+		<img src="shrimp1.png" alt="Mountains" style="width:100%">
+		<h4>Seapak Shrimp</h4>
+		<p>5.6$</p>
+		</div>
+		</div>
+	<div class="column nature">
+		<div class="content">
+		<img src="shrimp1.jpg" alt="Lights" style="width:100%">
+		<h4>Global Healthy Shrimp</h4>
+		<p>8$</p>
+		</div>
+	</div>
   <div class="column nature">
     <div class="content">
     <img src="shrimp2.jpg" alt="Nature" style="width:100%">
@@ -319,6 +318,8 @@ h1 {
       <p>2$</p>
     </div>
   </div>
+  		<a href="http://www.bacchusrestaurant.ie/"><IMG SRC="banner_982x197.gif">
+
 <!-- END GRID -->
 </div>
 
@@ -370,8 +371,8 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-<br><br>
 
+<br><br>
 
 </body>
 </html>
