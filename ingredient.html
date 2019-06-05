@@ -106,7 +106,7 @@ h1 {
         margin-bottom: 0;
         background-image: linear-gradient(to right, #ae9576, #99866d, #5d5954);
         font-size: 16px;
-        text-align: center;
+        text-align: center !important;
     }
     .navbar a {
         width: 110px;
@@ -117,12 +117,18 @@ h1 {
     }
     .navbar-brand {
         width: 100px !important;
+        background-color: transparent !important;
     }
+    .navbar .navbar-nav a:hover,
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: rgba( 255, 255, 255, 0.3 );
-		color: #fff;
+        background-color: rgba( 255, 255, 255, 0.3 ) !important;
+    color: #fff;
+    -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
     .navbar-nav > li > ul > li > a:hover {
         color: #f9a602 !important;
@@ -132,61 +138,57 @@ h1 {
         color: #424242 !important;
     }
     .navbar-toggle, .icon-bar {
-		border:1px solid #fff;
-	}
-	button.navbar-toggle{
-		border-color: #fff !important;
-	}
+    border:1px solid #fff;
+  }
+  button.navbar-toggle{
+    border-color: #fff !important;
+  }
     .navbar-toggle {
         background-color: #ff6b21 !important;
     }
     .content {
-    	text-align: center;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
     .col-sm-4 {
-    	padding: 5px;
-    }
-    .carousel {
-        max-width: 800px;
-    }
-    .carousel-inner > .item {
-        max-width: 800px;
+      padding: 5px;
     }
     .bg-gray {
         background-color: #EEE;
     }
     .btn {
         color: #fff;
-        background-color: #5d5954 ;
-        border: solid 2px;
+        background-color: #836947;
+        border: #836947 solid 2px;
         padding: 9px 19px 9px 19px;
         text-decoration: none;
         border-radius: 0px !important;
         font-weight: bold;
     }
     .btn:hover {
-        color: ;
+        color: #836947;
         background-color: #fff;
+      -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
     .btn-xl {
         font-size: 20px;
         padding: 12px 40px 12px 40px;
     }
-    .adcopy {
+    .opsans {
         font-family: 'Open Sans', sans-serif;
     }
-	.input-lg {
-		border-radius: 0px !important;
-	}
+  .input-lg {
+    border-radius: 0px !important;
+  }
     footer {
         background-color: #424242;
         color: #fff;
-        padding-top: 50px;
-        padding-bottom: 40px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
-	
 	<!--bar-->
 
     </style>
