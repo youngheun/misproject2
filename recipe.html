@@ -185,11 +185,16 @@ body {
     .navbar-brand {
         width: 100px !important;
     }
+    .navbar .navbar-nav a:hover,
     .navbar .navbar-nav > .open > a,
     .navbar .navbar-nav > .open > a:hover,
     .navbar .navbar-nav > .open > a:focus {
-        background-color: rgba( 255, 255, 255, 0.3 );
-    color: #fff;
+        background-color: rgba( 255, 255, 255, 0.3 ) !important;
+		color: #fff;
+		-webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
     }
     .navbar-nav > li > ul > li > a:hover {
         color: #99866d !important;
@@ -414,7 +419,7 @@ h1 {
 <div class="row">
   <div class="column" style="background-color:;"> 
 <br><div class="container">
-  <img src="tp.jpg" alt="Avatar" class="image">
+  <img src="please.jpg" alt="Avatar" class="image">
   <div class="overlay">
     <div class="text">Category: Pasta<br>Origin: Zambia<br>
 Time: 30min</div>
